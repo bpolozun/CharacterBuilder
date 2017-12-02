@@ -13,6 +13,7 @@ class Class {
 public:
 	Class();
 	virtual ~Class();
+	int getAttributeMod
 };
 
 #endif /* CLASS_H_ */

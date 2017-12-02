@@ -17,11 +17,12 @@
 class Player {
 
 private:
-	int strength, wisdom, dexterity, intelligence, charisma, constitution;
+	int attributeArray[6];
+	int attributeModArray[6];
 
 	Race userRace;
 	Item* itemArray;
-	Class* classes;
+	Class classes[7];
 
 	int skillsArray[26];
 
@@ -35,7 +36,7 @@ public:
 	virtual ~Player();
 
 	void setRace(Race race);
-	void getRace();
+	Race getRace();
 
 	void addItem(Item item);
 	Item* getInventory();
@@ -44,6 +45,8 @@ public:
 
 	void setSkillLevel(int skillLocation, int newValue);
 	int getSkillLevel(int skillLocation);
+
+	void onUpdateSkills();
 
 
 };

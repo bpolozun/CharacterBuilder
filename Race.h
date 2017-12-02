@@ -13,6 +13,8 @@
 class Race {
 private:
 	std::string Name;
+
+	int attributeMods[6];
 public:
 	Race();
 	virtual ~Race();
