@@ -2,22 +2,22 @@
 * Player.cpp
 *
 *  Created on: Nov 29, 2017
-*      Author: itcs3112-user
+*      Author: Benjamin Polozune
 */
 
 #include "Player.h"
 
 Player::Player() {
-	// TODO Auto-generated constructor stub
 
 }
 
 Player::~Player() {
-	// TODO Auto-generated destructor stub
+
 }
 
 void Player::setRace(Race race)
 {
+	userRace = race;
 }
 
 Race Player::getRace()
@@ -27,6 +27,9 @@ Race Player::getRace()
 
 void Player::addItem(Item item)
 {
+	if (itemArraySize >= .9*itemArrayCapacity) {
+		
+	}
 }
 
 Item * Player::getInventory()
@@ -34,22 +37,31 @@ Item * Player::getInventory()
 	return nullptr;
 }
 
-void Player::addClass(Class newClass)
+bool Player::addClass(Class newClass)
 {
+	for (int i = 0; i < 7; i++) {
+		if (&classes[i] == nullptr ){
+			classes[i] = newClass;
+		}
+		return true;
+	}
+
+	return false;
 }
 
-Class * Player::getClasses()
+Class Player::getClasses()
 {
-	return nullptr;
+	return *classes;
 }
 
 void Player::setSkillLevel(int skillLocation, int newValue)
 {
+	skillsArray[skillLocation] = newValue;
 }
 
 int Player::getSkillLevel(int skillLocation)
 {
-	return 0;
+	return skillsArray[skillLocation];
 }
 
 void Player::onUpdateSkills()

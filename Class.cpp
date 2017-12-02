@@ -2,7 +2,7 @@
 * Class.cpp
 *
 *  Created on: Nov 29, 2017
-*      Author: itcs3112-user
+*      Author: Benjamin Polozune
 */
 
 #include "Class.h"
