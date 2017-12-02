@@ -13,10 +13,11 @@ class Class {
 public:
 	Class();
 	virtual ~Class();
-	int getAttributeMod
+	int getAttributeMod();
+	int getRestriction();
 };
 
-class Warrior : public Class {
+class Fighter : public Class {
 
 };
 

@@ -57,6 +57,8 @@ private:
 	int craftArray[6];
 	int KnowledgeArray[10];
 	int ProfessionArray[30];
+	int alignmentGoodEvil;
+	int alignmentLawfulChaotic;
 
 
 	int baseAttackBonus;

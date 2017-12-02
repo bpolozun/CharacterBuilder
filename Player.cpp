@@ -39,13 +39,77 @@ Item * Player::getInventory()
 
 bool Player::addClass(Class newClass)
 {
-	for (int i = 0; i < 7; i++) {
-		if (&classes[i] == nullptr ){
-			classes[i] = newClass;
-		}
-		return true;
-	}
 
+	int classRestriction;
+	newClass.getRestriction();
+	switch(classRestriction) {
+		//case 1 is restricted to chaotic only, for barbarians.
+	case 1:
+		if (alignmentLawfulChaotic != 0) {
+			break;
+		}
+		else {
+			for (int i = 0; i < 7; i++) {
+				if (&classes[i] == nullptr) {
+					classes[i] = newClass;
+				}
+				return true;
+			}
+			return false;
+		}
+		//Case 2 is neutral only, for druids.
+	case 2:
+		if (alignmentLawfulChaotic != 1) {
+			break;
+		}
+		else {
+			for (int i = 0; i < 7; i++) {
+				if (&classes[i] == nullptr) {
+					classes[i] = newClass;
+				}
+				return true;
+			}
+			return false;
+		}
+		//Case 3 is lawful only, for monks.
+	case 3:
+		if (alignmentLawfulChaotic != 2) {
+			break;
+		}
+		else {
+			for (int i = 0; i < 7; i++) {
+				if (&classes[i] == nullptr) {
+					classes[i] = newClass;
+				}
+				return true;
+			}
+			return false;
+		}
+		//Case 4 is for lawful good, for Paladins.
+	case 4:
+		if (alignmentLawfulChaotic != 2) {
+			return false;
+		}
+		else if (alignmentGoodEvil != 0) {
+			return false;
+		}
+		else {
+			for (int i = 0; i < 7; i++) {
+				if (&classes[i] == nullptr) {
+					classes[i] = newClass;
+				}
+				return true;
+			}
+			return false;
+		}
+	case 0 :
+		for (int i = 0; i < 7; i++) {
+			if (&classes[i] == nullptr) {
+				classes[i] = newClass;
+			}
+			return true;
+		}
+	}
 	return false;
 }
 

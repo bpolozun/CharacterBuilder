@@ -16,3 +16,13 @@ Class::~Class() {
 	// TODO Auto-generated destructor stub
 }
 
+int Class::getAttributeMod()
+{
+	return 0;
+}
+
+int Class::getRestriction()
+{
+	return 0;
+}
+
