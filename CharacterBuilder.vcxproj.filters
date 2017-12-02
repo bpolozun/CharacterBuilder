@@ -60,6 +60,9 @@
     <ClCompile Include="Ranger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Feat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class.h">
@@ -105,6 +108,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ranger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Feat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

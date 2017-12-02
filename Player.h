@@ -25,6 +25,7 @@ private:
 	//Races are user defined.
 	Race userRace;
 	//Dynamically sized array of items.
+	Feat *featArray;
 	Item* itemArray;
 	int itemArraySize, itemArrayCapacity;
 	//As certain classes are mutually incompatible due to alignment restrictions, only seven classes can be stored. As such, this is a standard array.
