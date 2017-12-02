@@ -16,13 +16,19 @@ Class::~Class() {
 	// TODO Auto-generated destructor stub
 }
 
-int Class::getAttributeMod()
-{
-	return 0;
-}
 
 int Class::getRestriction()
 {
-	return 0;
+	return restriction;
+}
+
+int * Class::getSkillClass()
+{
+	return skillClassArray;
+}
+
+int * Class::getKnowledgeClass()
+{
+	return knowledgeClassArray;
 }
 

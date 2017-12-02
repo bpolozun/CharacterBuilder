@@ -10,51 +10,17 @@
 #define CLASS_H_
 
 class Class {
+private:
+	int restriction;
+	int skillClassArray[20];
+	int knowledgeClassArray[10];
 public:
 	Class();
 	virtual ~Class();
-	int getAttributeMod();
 	int getRestriction();
+	int* getSkillClass();
+	int* getKnowledgeClass();
 };
 
-class Fighter : public Class {
-
-};
-
-class Sorcerer : public Class {
-
-};
-
-class Paladin : public Class {
-
-};
-
-class Wizard : public Class {
-
-};
-
-class Rogue : public Class {
-
-};
-
-class Druid : public Class {
-
-};
-
-class Cleric : public Class {
-
-};
-
-class Monk : public Class {
-
-};
-
-class Barbarian : public Class {
-
-};
-
-class Bard : public Class {
-
-};
 
 #endif /* CLASS_H_ */

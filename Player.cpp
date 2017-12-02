@@ -127,7 +127,3 @@ int Player::getSkillLevel(int skillLocation)
 {
 	return skillsArray[skillLocation];
 }
-
-void Player::onUpdateSkills()
-{
-}

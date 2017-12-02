@@ -21,7 +21,6 @@ public:
 };
 
 class Human : public Race {
-
 };
 
 class Elf : public Race {

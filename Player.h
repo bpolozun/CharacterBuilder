@@ -54,8 +54,10 @@ private:
 	20: Use Magic Device
 	*/
 	int skillsArray[20];
+	int skillModArray[20];
 	int craftArray[6];
-	int KnowledgeArray[10];
+	int knowledgeArray[10];
+	int knowledgeModArray[10];
 	int ProfessionArray[30];
 	int alignmentGoodEvil;
 	int alignmentLawfulChaotic;
@@ -81,7 +83,6 @@ public:
 	void setSkillLevel(int skillLocation, int newValue);
 	int getSkillLevel(int skillLocation);
 
-	void onUpdateSkills();
 
 
 };
