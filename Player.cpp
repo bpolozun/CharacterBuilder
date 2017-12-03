@@ -27,14 +27,12 @@ Race Player::getRace()
 
 void Player::addItem(Item item)
 {
-	if (itemArraySize >= .9*itemArrayCapacity) {
-		
-	}
+	
 }
 
-Item * Player::getInventory()
+std::vector<Item> Player::getInventory()
 {
-	return nullptr;
+	return itemArray;
 }
 
 bool Player::addClass(Class newClass)

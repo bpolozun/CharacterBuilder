@@ -14,6 +14,7 @@
 #include "Race.h"
 #include "Feat.h"
 #include <iostream>
+#include <vector>
 
 class Player {
 
@@ -26,9 +27,8 @@ private:
 	//Races are user defined.
 	Race userRace;
 	//Dynamically sized array of items.
-	Feat *featArray;
-	Item* itemArray;
-	int itemArraySize, itemArrayCapacity;
+	std::vector<Feat> featArray;
+	std::vector<Item> itemArray;
 	//As certain classes are mutually incompatible due to alignment restrictions, only seven classes can be stored. As such, this is a standard array.
 	Class classes[7];
 	int hitPoints;
@@ -80,7 +80,7 @@ public:
 	Race getRace();
 
 	void addItem(Item item);
-	Item* getInventory();
+	std::vector<Item> getInventory();
 	bool addClass(Class newClass);
 	Class getClasses();
 
