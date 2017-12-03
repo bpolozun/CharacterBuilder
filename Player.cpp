@@ -131,8 +131,10 @@ int Player::getSkillLevel(int skillLocation)
 void Player::onClassUpdate()
 {
 	baseAttackBonus = 0;
+	hitPoints = 0;
 	for (int i = 0; i < 7, i++) {
-		baseAttackBonus += classes[i].getBAB;
+		baseAttackBonus += classes[i].getBAB();
+		hitPoints += classes[i].getHitPoints();
 		
 	}
 

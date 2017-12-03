@@ -104,8 +104,14 @@
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="Cleric.cpp" />
     <ClCompile Include="Druid.cpp" />
+    <ClCompile Include="Dwarf.cpp" />
+    <ClCompile Include="Elf.cpp" />
     <ClCompile Include="Feat.cpp" />
     <ClCompile Include="Fighter.cpp" />
+    <ClCompile Include="Gnome.cpp" />
+    <ClCompile Include="HalfElf.cpp" />
+    <ClCompile Include="HalfOrc.cpp" />
+    <ClCompile Include="Human.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Monk.cpp" />
     <ClCompile Include="Paladin.cpp" />
@@ -122,17 +128,27 @@
     <ClInclude Include="Class.h" />
     <ClInclude Include="Cleric.h" />
     <ClInclude Include="Druid.h" />
+    <ClInclude Include="Dwarf.h" />
+    <ClInclude Include="Elf.h" />
     <ClInclude Include="Feat.h" />
     <ClInclude Include="Fighter.h" />
+    <ClInclude Include="Gnome.h" />
+    <ClInclude Include="HalfElf.h" />
+    <ClInclude Include="HalfOrc.h" />
+    <ClInclude Include="Human.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Monk.h" />
     <ClInclude Include="Paladin.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Race.h" />
     <ClInclude Include="Ranger.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Rogue.h" />
     <ClInclude Include="Sorcerer.h" />
     <ClInclude Include="Wizard.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CharacterBuilder.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
