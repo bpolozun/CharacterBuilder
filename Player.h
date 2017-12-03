@@ -9,10 +9,11 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-#include "Class.h";
-#include "Item.h";
+#include "Class.h"
+#include "Item.h"
 #include "Race.h"
-#include <iostream>;
+#include "Feat.h"
+#include <iostream>
 
 class Player {
 
@@ -30,6 +31,7 @@ private:
 	int itemArraySize, itemArrayCapacity;
 	//As certain classes are mutually incompatible due to alignment restrictions, only seven classes can be stored. As such, this is a standard array.
 	Class classes[7];
+	int hitPoints;
 	/*
 	Stores the players skills in an array in the following order:
 	0: Acrobatics

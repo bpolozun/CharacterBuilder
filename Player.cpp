@@ -127,3 +127,13 @@ int Player::getSkillLevel(int skillLocation)
 {
 	return skillsArray[skillLocation];
 }
+
+void Player::onClassUpdate()
+{
+	baseAttackBonus = 0;
+	for (int i = 0; i < 7, i++) {
+		baseAttackBonus += classes[i].getBAB;
+		
+	}
+
+}
