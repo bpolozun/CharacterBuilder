@@ -10,6 +10,8 @@ Paladin::Paladin()
 	skillClassArray[14] = 3;
 	skillClassArray[15] = 3;
 	skillClassArray[17] = 3;
+	knowledgeClassArray[7] = 3;
+	knowledgeClassArray[9] = 3;
 
 }
 

@@ -10,6 +10,7 @@ Sorcerer::Sorcerer()
 	skillClassArray[11] = 3;
 	skillClassArray[17] = 3;
 	skillClassArray[21] = 3;
+	knowledgeClassArray[0] = 3;
 }
 
 

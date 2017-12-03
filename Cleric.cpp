@@ -9,6 +9,11 @@ Cleric::Cleric()
 	skillClassArray[10] = 3;
 	skillClassArray[15] = 3;
 	skillClassArray[17] = 3;
+	knowledgeClassArray[0] = 3;
+	knowledgeClassArray[4] = 3;
+	knowledgeClassArray[7] = 3;
+	knowledgeClassArray[8] = 3;
+	knowledgeClassArray[9] = 3;
 }
 
 

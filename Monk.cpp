@@ -14,6 +14,8 @@ Monk::Monk()
 	skillClassArray[15] = 3;
 	skillClassArray[18] = 3;
 	skillClassArray[20] = 3;
+	knowledgeClassArray[4] = 3;
+	knowledgeClassArray[9] = 3;
 }
 
 

@@ -19,6 +19,11 @@ Bard::Bard()
 	skillClassArray[17] = 3;
 	skillClassArray[18] = 3;
 	skillClassArray[21] = 3;
+
+	for (int i = 0; i < 10; i++) {
+		knowledgeClassArray[i] = 3;
+	}
+
 }
 
 

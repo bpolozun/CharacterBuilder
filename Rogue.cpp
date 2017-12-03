@@ -20,6 +20,8 @@ Rogue::Rogue()
 	skillClassArray[18] = 3;
 	skillClassArray[20] = 3;
 	skillClassArray[21] = 3;
+	knowledgeClassArray[1] = 3;
+	knowledgeClassArray[6] = 3;
 }
 
 
