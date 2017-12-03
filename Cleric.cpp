@@ -14,6 +14,7 @@ Cleric::Cleric()
 	knowledgeClassArray[7] = 3;
 	knowledgeClassArray[8] = 3;
 	knowledgeClassArray[9] = 3;
+	skillPointperLevel = 2;
 }
 
 

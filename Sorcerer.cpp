@@ -13,6 +13,7 @@ Sorcerer::Sorcerer()
 	knowledgeClassArray[0] = 3;
 
 	BAB = .5 * level;
+	skillPointperLevel = 2;
 }
 
 

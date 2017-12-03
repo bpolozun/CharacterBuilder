@@ -14,6 +14,7 @@ Barbarian::Barbarian()
 	skillClassArray[20] = 3;
 	knowledgeClassArray[6] = 3;
 	BAB = 1*level;
+	skillPointperLevel = 4
 }
 
 

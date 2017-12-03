@@ -13,6 +13,7 @@ Wizard::Wizard()
 	}
 
 	BAB = .5 * level;
+	skillPointperLevel = 2;
 }
 
 

@@ -17,6 +17,8 @@ protected:
 	int hitDice;
 	int level;
 	int BAB;
+	int skillPointperLevel;
+	int featProgression;
 public:
 	Class();
 	virtual ~Class();

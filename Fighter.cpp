@@ -13,6 +13,7 @@ Fighter::Fighter()
 	knowledgeClassArray[1] = 3;
 	knowledgeClassArray[2] = 3;
 	BAB = 1 * level;
+	skillPointperLevel = 2;
 
 }
 

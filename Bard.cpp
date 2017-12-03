@@ -24,6 +24,7 @@ Bard::Bard()
 		knowledgeClassArray[i] = 3;
 	}
 	BAB = .75 * level;
+	skillPointperLevel = 6
 }
 
 

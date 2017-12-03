@@ -19,6 +19,7 @@ Ranger::Ranger()
 	knowledgeClassArray[6] = 3;
 	
 	BAB = 1 * level;
+	skillPointperLevel = 6
 }
 
 
