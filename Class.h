@@ -10,10 +10,12 @@
 #define CLASS_H_
 
 class Class {
-private:
+protected:
 	int restriction;
-	int skillClassArray[20];
+	int skillClassArray[21];
 	int knowledgeClassArray[10];
+	int hitDice;
+	int level;
 public:
 	Class();
 	virtual ~Class();

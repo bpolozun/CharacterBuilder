@@ -35,26 +35,27 @@ private:
 	0: Acrobatics
 	1: Appraise.
 	2: Bluff
-	3: Diplomacy
-	4: Disable Device
-	5: Disguise
-	6: Escape ARtist
-	7: Fly
-	8: Handle Animal
-	9: Heal
-	10: Intimidate
-	11: Perception
-	12: Perform
-	13: Ride
-	14: Sense Motive
-	15: Sleight of Hand
-	16: Spellcraft
-	17: Stealth
-	18: Survival
-	19: Swim
-	20: Use Magic Device
+	3. Climb
+	4: Diplomacy
+	5: Disable Device
+	6: Disguise
+	7: Escape ARtist
+	8: Fly
+	9: Handle Animal
+	10: Heal
+	11: Intimidate
+	12: Perception
+	13: Perform
+	14: Ride
+	15: Sense Motive
+	16: Sleight of Hand
+	17: Spellcraft
+	18: Stealth
+	19: Survival
+	2: Swim
+	21: Use Magic Device
 	*/
-	int skillsArray[20];
+	int skillsArray[21];
 	int skillModArray[20];
 	int craftArray[6];
 	int knowledgeArray[10];
