@@ -16,6 +16,7 @@ Monk::Monk()
 	skillClassArray[20] = 3;
 	knowledgeClassArray[4] = 3;
 	knowledgeClassArray[9] = 3;
+	BAB = 1 * level;
 }
 
 

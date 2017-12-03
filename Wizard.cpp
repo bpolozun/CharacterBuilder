@@ -11,6 +11,8 @@ Wizard::Wizard()
 	for (int i = 0; i < 10; i++) {
 		knowledgeClassArray[i] = 3;
 	}
+
+	BAB = .5 * level;
 }
 
 

@@ -85,6 +85,8 @@ public:
 	void setSkillLevel(int skillLocation, int newValue);
 	int getSkillLevel(int skillLocation);
 
+	void onClassUpdate();
+
 
 
 };

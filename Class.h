@@ -16,6 +16,7 @@ protected:
 	int knowledgeClassArray[10];
 	int hitDice;
 	int level;
+	int BAB;
 public:
 	Class();
 	virtual ~Class();

@@ -19,4 +19,5 @@ Cleric::Cleric()
 
 Cleric::~Cleric()
 {
+	BAB = .75 * level;
 }

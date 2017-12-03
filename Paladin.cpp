@@ -12,6 +12,7 @@ Paladin::Paladin()
 	skillClassArray[17] = 3;
 	knowledgeClassArray[7] = 3;
 	knowledgeClassArray[9] = 3;
+	BAB = 1 * level;
 
 }
 

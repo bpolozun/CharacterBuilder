@@ -22,6 +22,7 @@ Rogue::Rogue()
 	skillClassArray[21] = 3;
 	knowledgeClassArray[1] = 3;
 	knowledgeClassArray[6] = 3;
+	BAB = 1 * level;
 }
 
 
