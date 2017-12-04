@@ -25,6 +25,26 @@ Race Player::getRace()
 	return Race();
 }
 
+void Player::setAlignmentLawfulChaotic(int newAlignment)
+{
+	alignmentLawfulChaotic = newAlignment;
+}
+
+int Player::getAlightmentLawfulChaotic()
+{
+	return alignmentLawfulChaotic;
+}
+
+int Player::getAlignmentGoodEvil()
+{
+	return alignmentGoodEvil;
+}
+
+void Player::setAlignmentGoodEvil(int newAlignment)
+{
+	alignmentGoodEvil = newAlignment;
+}
+
 void Player::addItem(Item item)
 {
 	

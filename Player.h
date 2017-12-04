@@ -78,6 +78,10 @@ public:
 
 	void setRace(Race race);
 	Race getRace();
+	void setAlignmentLawfulChaotic(int newAlignment);
+	int getAlightmentLawfulChaotic();
+	int getAlignmentGoodEvil();
+	void setAlignmentGoodEvil(int newAlignment);
 
 	void addItem(Item item);
 	std::vector<Item> getInventory();
