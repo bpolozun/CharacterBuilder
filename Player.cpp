@@ -47,7 +47,7 @@ void Player::setAlignmentGoodEvil(int newAlignment)
 
 void Player::addItem(Item item)
 {
-	
+	itemArray.push_back(item);
 }
 
 std::vector<Item> Player::getInventory()
