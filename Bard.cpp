@@ -1,9 +1,11 @@
 #include "Bard.h"
+#include "Spell.h"
 
 
 
 Bard::Bard()
 {
+	level = 1;
 	skillClassArray[0] = 3;
 	skillClassArray[1] = 3;
 	skillClassArray[2] = 3;
@@ -24,10 +26,14 @@ Bard::Bard()
 		knowledgeClassArray[i] = 3;
 	}
 	BAB = .75 * level;
-	skillPointperLevel = 6
+	skillPointperLevel = 6;
 }
 
 
 Bard::~Bard()
+{
+}
+
+void Bard::onLevelUp()
 {
 }

@@ -4,6 +4,7 @@
 
 Barbarian::Barbarian()
 {
+	level = 1;
 	skillClassArray[0] = 3;
 	skillClassArray[3] = 3;
 	skillClassArray[9] = 3;
@@ -13,11 +14,15 @@ Barbarian::Barbarian()
 	skillClassArray[19] = 3;
 	skillClassArray[20] = 3;
 	knowledgeClassArray[6] = 3;
-	BAB = 1*level;
-	skillPointperLevel = 4
+	BAB = 1 * level;
+	skillPointperLevel = 4;
 }
 
 
 Barbarian::~Barbarian()
+{
+}
+
+void Barbarian::onLevelUp()
 {
 }

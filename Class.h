@@ -19,7 +19,8 @@ protected:
 	int BAB;
 	int BABMod;
 	int skillPointperLevel;
-	int featProgression;
+	int fortSave, willSave, reflexSave;
+
 public:
 	Class();
 	virtual ~Class();

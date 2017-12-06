@@ -6,5 +6,6 @@ class Monk :
 public:
 	Monk();
 	~Monk();
+	void onLevelUp();
 };
 

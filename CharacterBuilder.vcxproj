@@ -120,6 +120,7 @@
     <ClCompile Include="Ranger.cpp" />
     <ClCompile Include="Rogue.cpp" />
     <ClCompile Include="Sorcerer.cpp" />
+    <ClCompile Include="Spell.cpp" />
     <ClCompile Include="Wizard.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Rogue.h" />
     <ClInclude Include="Sorcerer.h" />
+    <ClInclude Include="Spell.h" />
     <ClInclude Include="Wizard.h" />
   </ItemGroup>
   <ItemGroup>

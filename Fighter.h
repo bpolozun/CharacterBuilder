@@ -6,5 +6,6 @@ class Fighter :
 public:
 	Fighter();
 	~Fighter();
+	void onLevelUp();
 };
 

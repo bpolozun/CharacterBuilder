@@ -16,6 +16,7 @@ private:
 	std::string itemDescription;
 public:
 	Item();
+	Item(std::string Name, std::string Description);
 	virtual ~Item();
 
 	std::string getName();

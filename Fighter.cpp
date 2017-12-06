@@ -4,6 +4,7 @@
 
 Fighter::Fighter()
 {
+	level = 1;
 	skillClassArray[3] = 3;
 	skillClassArray[9] = 3;
 	skillClassArray[11] = 3;

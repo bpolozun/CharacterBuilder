@@ -6,5 +6,6 @@ class Rogue :
 public:
 	Rogue();
 	~Rogue();
+	void onLevelUp();
 };
 

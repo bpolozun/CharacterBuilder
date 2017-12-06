@@ -4,6 +4,7 @@
 
 Monk::Monk()
 {
+	level = 1;
 	skillClassArray[0] = 3;
 	skillClassArray[3] = 3;
 	skillClassArray[7] = 3;

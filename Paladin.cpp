@@ -4,6 +4,7 @@
 
 Paladin::Paladin()
 {
+	level = 1;
 	skillClassArray[4] = 3;
 	skillClassArray[9] = 3;
 	skillClassArray[10] = 3;

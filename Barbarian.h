@@ -6,5 +6,6 @@ class Barbarian :
 public:
 	Barbarian();
 	~Barbarian();
+	void onLevelUp();
 };
 

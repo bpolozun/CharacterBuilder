@@ -4,6 +4,7 @@
 
 Rogue::Rogue()
 {
+	level = 1;
 	skillClassArray[0] = 3;
 	skillClassArray[1] = 3;
 	skillClassArray[2] = 3;
