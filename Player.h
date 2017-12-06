@@ -70,6 +70,8 @@ private:
 	int baseAttackBonus;
 	int combatManeuverDefense;
 	int combatManeuverBonus;
+	int age, weight, height;
+	bool gender;
 
 
 public:
