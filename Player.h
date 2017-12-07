@@ -72,6 +72,13 @@ private:
 	int combatManeuverBonus;
 	int age, weight, height;
 	bool gender;
+	int overallLevel;
+	int totalSkillPoints;
+	int totalFeats;
+	int availableFeats;
+	int availableSkills;
+	int usedFeats;
+	int usedSkills;
 
 
 public:
