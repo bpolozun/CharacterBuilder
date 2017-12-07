@@ -3,6 +3,8 @@
 class Monk :
 	public Class
 {
+private:
+	int kiPool;
 public:
 	Monk();
 	~Monk();
