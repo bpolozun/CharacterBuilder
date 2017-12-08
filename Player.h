@@ -30,7 +30,7 @@ private:
 	std::vector<Feat> featArray;
 	std::vector<Item> itemArray;
 	//As certain classes are mutually incompatible due to alignment restrictions, only seven classes can be stored. As such, this is a standard array.
-	Class classes[7];
+	Class classes[9];
 	int hitPoints;
 	/*
 	Stores the players skills in an array in the following order:
@@ -60,12 +60,15 @@ private:
 	int skillsArray[21];
 	int skillModArray[20];
 	int craftArray[6];
+	/*
+	Knowledge skills are set 
+	*/
 	int knowledgeArray[10];
 	int knowledgeModArray[10];
 	int ProfessionArray[30];
 	int alignmentGoodEvil;
 	int alignmentLawfulChaotic;
-
+	std::string playerName;
 
 	int baseAttackBonus;
 	int combatManeuverDefense;

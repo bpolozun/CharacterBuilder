@@ -18,7 +18,6 @@ protected:
 	int hitPoints;
 	int level;
 	int BAB;
-	int BABMod;
 	int skillPointperLevel;
 	int fortSave, willSave, reflexSave;
 
@@ -30,7 +29,6 @@ public:
 	int* getKnowledgeClass();
 	int getBAB();
 	int getSkillPointPerLevel();
-	int getFeatProgression();
 	int getHitPoints();
 
 };

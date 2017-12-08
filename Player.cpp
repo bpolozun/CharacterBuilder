@@ -61,9 +61,9 @@ bool Player::addClass(Class newClass)
 	int classRestriction;
 	newClass.getRestriction();
 	switch(classRestriction) {
-		//case 1 is restricted to chaotic only, for barbarians.
+		//case 1 is restricted to non lawful only, for barbarians.
 	case 1:
-		if (alignmentLawfulChaotic != 0) {
+		if (alignmentLawfulChaotic == 2) {
 			break;
 		}
 		else {

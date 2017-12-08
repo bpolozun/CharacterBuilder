@@ -8,7 +8,10 @@
 #include "Class.h"
 
 Class::Class() {
-	// TODO Auto-generated constructor stub
+	restriction = 0;
+	BAB = 0;
+	skillPointperLevel = 0;
+	hitPoints = 0;
 
 }
 
@@ -42,10 +45,6 @@ int Class::getSkillPointPerLevel()
 	return skillPointperLevel;
 }
 
-int Class::getFeatProgression()
-{
-	return featProgression;
-}
 
 int Class::getHitPoints()
 {

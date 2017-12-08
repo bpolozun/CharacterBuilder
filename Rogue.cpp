@@ -24,7 +24,7 @@ Rogue::Rogue()
 	knowledgeClassArray[1] = 3;
 	knowledgeClassArray[6] = 3;
 	BAB = 1 * level;
-	skillPointperLevel = 8
+	skillPointperLevel = 8;
 }
 
 
