@@ -145,7 +145,7 @@ Ranger::~Ranger()
 		BAB = 12;
 		fortSave = 8;
 		reflexSave = 8;
-		willSave = 8;
+		willSave = 4;
 		break;
 	case 13:
 		spellsPerDay[0] = 3;
@@ -155,7 +155,7 @@ Ranger::~Ranger()
 		BAB = 13;
 		fortSave = 8;
 		reflexSave = 8;
-		willSave = 8;
+		willSave = 4;
 		break;
 	case 14:
 		spellsPerDay[0] = 3;
