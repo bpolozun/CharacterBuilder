@@ -9,7 +9,7 @@
 
 Item::Item() {
 	itemName = "no name";
-	itemDescription = "no decription"
+	itemDescription = "no decription";
 
 }
 

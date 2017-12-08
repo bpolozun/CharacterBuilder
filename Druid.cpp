@@ -440,5 +440,5 @@ std::string Druid::getSpecial()
 		returnString += " an unlimited number of ";
 	}
 	returnString += " times per day. A druid also has a number of other useful abilities. Consult your player's handbook for more information.";
-	return returnString
+	return returnString;
 }

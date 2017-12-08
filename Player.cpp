@@ -73,7 +73,7 @@ int Player::getAge()
 }
 void Player::setAge(int newAge)
 {
-	int raceCode = userRace.getRaceID;
+	int raceCode = userRace.getRaceID();
 	ageCategory = newAge;
 
 	switch (raceCode) {
@@ -288,8 +288,8 @@ void Player::onClassUpdate()
 		for (int j = 0; j < 21; j++) {
 			knowledgeModArray[j] += classes[i].getKnowledgeClass(j);
 		}
-		totalSkillPoints += classes[i].getSkillPointPerLevel * classes[i].getLevel();
-		totalFeats += classes[i].getLevel / 2;
+		totalSkillPoints += classes[i].getSkillPointPerLevel() * classes[i].getLevel();
+		totalFeats += classes[i].getLevel() / 2;
 		willSave += classes[i].getWillSave();
 		fortitudeSave += classes[i].getFortSave();
 		reflexSave += classes[i].getRefSave();

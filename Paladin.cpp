@@ -114,7 +114,7 @@ void Paladin::onLevelUp()
 		BAB = 7;
 		fortSave = 5;
 		reflexSave = 2;
-		willSave - 5;
+		willSave = 5;
 		smiteEvil = 3;
 		layOnHands = 3;
 		hitPoints = 5 * level;

@@ -20,7 +20,7 @@ Ranger::Ranger()
 	knowledgeClassArray[6] = 3;
 	
 	BAB = 1 * level;
-	skillPointperLevel = 6
+	skillPointperLevel = 6;
 }
 
 
@@ -112,7 +112,7 @@ void Ranger::onLevelUp()
 		BAB = 7;
 		fortSave = 5;
 		reflexSave = 5;
-		willSave - 2;
+		willSave = 2;
 		favoredEnemy = 2;
 		hitPoints = 5 * level;
 		break;
