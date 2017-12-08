@@ -347,3 +347,41 @@ void Wizard::onLevelUp()
 		break;
 	}
 }
+
+void Wizard::setLevel(int newLevel)
+{
+	
+		level = newLevel;
+		onLevelUp();
+}
+
+
+int Wizard::getLevel()
+{
+	return level;
+}
+
+int Wizard::getBAB()
+{
+	return BAB;
+}
+
+int Wizard::getFortSave()
+{
+	return fortSave;
+}
+
+int Wizard::getWillSave()
+{
+	return willSave;
+}
+
+int Wizard::getReflexSave()
+{
+	return reflexSave;
+}
+
+int Wizard::getSpellsPerDay(int spellLevel)
+{
+	return spellsPerDay[spellLevel];
+}

@@ -350,3 +350,41 @@ void Druid::onLevelUp()
 		break;
 	}
 }
+
+void Druid::setLevel(int newLevel)
+{
+
+	level = newLevel;
+	onLevelUp();
+}
+
+
+int Druid::getLevel()
+{
+	return level;
+}
+
+int Druid::getBAB()
+{
+	return BAB;
+}
+
+int Druid::getFortSave()
+{
+	return fortSave;
+}
+
+int Druid::getWillSave()
+{
+	return willSave;
+}
+
+int Druid::getReflexSave()
+{
+	return reflexSave;
+}
+
+int Druid::getSpellsPerDay(int spellLevel)
+{
+	return spellsPerDay[spellLevel];
+}

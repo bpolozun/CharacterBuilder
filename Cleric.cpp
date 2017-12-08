@@ -350,3 +350,41 @@ void Cleric::onLevelUp()
 		reflexSave = 6;
 		break;
 	}
+}
+
+void Cleric::setLevel(int newLevel)
+{
+	level = newLevel;
+	onLevelUp();
+}
+
+
+	int Cleric::getLevel()
+	{
+		return level;
+	}
+
+	int Cleric::getBAB()
+	{
+		return BAB;
+	}
+
+	int Cleric::getFortSave()
+	{
+		return fortSave;
+	}
+
+	int Cleric::getWillSave()
+	{
+		return willSave;
+	}
+
+	int Cleric::getReflexSave()
+	{
+		return reflexSave;
+	}
+
+	int Cleric::getSpellsPerDay(int spellLevel)
+	{
+		return spellsPerDay[spellLevel];
+	}

@@ -28,7 +28,6 @@ Monk::~Monk()
 
 void Monk::onLevelUp()
 {
-
 	switch (level) {
 	case 1:
 		kiPool = 0;
@@ -170,4 +169,38 @@ void Monk::onLevelUp()
 		willSave = 12;
 		reflexSave = 12;
 		break;
+	}
+}
+
+void Monk::setLevel(int newLevel)
+{
+
+	level = newLevel;
+	onLevelUp();
+}
+
+
+int Monk::getLevel()
+{
+	return level;
+}
+
+int Monk::getBAB()
+{
+	return BAB;
+}
+
+int Monk::getFortSave()
+{
+	return fortSave;
+}
+
+int Monk::getWillSave()
+{
+	return willSave;
+}
+
+int Monk::getReflexSave()
+{
+	return reflexSave;
 }

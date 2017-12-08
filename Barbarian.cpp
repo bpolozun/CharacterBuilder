@@ -147,4 +147,36 @@ void Barbarian::onLevelUp()
 		fortSave = 12;
 		reflexSave = 6;
 		break;
+	}
+}
+
+void Barbarian::setLevel(int newLevel)
+{
+	level = newLevel;
+	onLevelUp();
+}
+
+int Barbarian::getLevel()
+{
+	return level;
+}
+
+int Barbarian::getBAB()
+{
+	return BAB;
+}
+
+int Barbarian::getFortSave()
+{
+	return fortSave;
+}
+
+int Barbarian::getWillSave()
+{
+	return willSave;
+}
+
+int Barbarian::getReflexSave()
+{
+	return reflexSave;
 }

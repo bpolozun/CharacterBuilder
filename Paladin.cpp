@@ -21,6 +21,11 @@ Paladin::Paladin()
 
 Paladin::~Paladin()
 {
+	
+}
+
+void Paladin::onLevelUp()
+{
 	switch (level) {
 	case 1:
 		spellsPerDay[0] = 0;
@@ -223,4 +228,42 @@ Paladin::~Paladin()
 		willSave = 12;
 		break;
 	}
+}
+
+void Paladin::setLevel(int newLevel)
+{
+
+	level = newLevel;
+	onLevelUp();
+}
+
+
+int Paladin::getLevel()
+{
+	return level;
+}
+
+int Paladin::getBAB()
+{
+	return BAB;
+}
+
+int Paladin::getFortSave()
+{
+	return fortSave;
+}
+
+int Paladin::getWillSave()
+{
+	return willSave;
+}
+
+int Paladin::getReflexSave()
+{
+	return reflexSave;
+}
+
+int Paladin::getSpellsPerDay(int spellLevel)
+{
+	return spellsPerDay[spellLevel];
 }

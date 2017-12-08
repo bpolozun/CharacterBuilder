@@ -26,6 +26,11 @@ Ranger::Ranger()
 
 Ranger::~Ranger()
 {
+	
+}
+
+void Ranger::onLevelUp()
+{
 	switch (level) {
 	case 1:
 		spellsPerDay[0] = 0;
@@ -228,4 +233,42 @@ Ranger::~Ranger()
 		willSave = 6;
 		break;
 	}
+}
+
+void Ranger::setLevel(int newLevel)
+{
+
+	level = newLevel;
+	onLevelUp();
+}
+
+
+int Ranger::getLevel()
+{
+	return level;
+}
+
+int Ranger::getBAB()
+{
+	return BAB;
+}
+
+int Ranger::getFortSave()
+{
+	return fortSave;
+}
+
+int Ranger::getWillSave()
+{
+	return willSave;
+}
+
+int Ranger::getReflexSave()
+{
+	return reflexSave;
+}
+
+int Ranger::getSpellsPerDay(int spellLevel)
+{
+	return spellsPerDay[spellLevel];
 }

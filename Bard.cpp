@@ -279,3 +279,39 @@ void Bard::onLevelUp()
 		break;
 	}
 }
+
+void Bard::setLevel(int newLevel)
+{
+	level = newLevel;
+	onLevelUp();
+}
+
+int Bard::getLevel()
+{
+	return level;
+}
+
+int Bard::getBAB()
+{
+	return BAB;
+}
+
+int Bard::getFortSave()
+{
+	return fortSave;
+}
+
+int Bard::getWillSave()
+{
+	return willSave;
+}
+
+int Bard::getReflexSave()
+{
+	return reflexSave;
+}
+
+int Bard::getSpellsPerDay(int spellLevel)
+{
+	return spellsPerDay[spellLevel];
+}

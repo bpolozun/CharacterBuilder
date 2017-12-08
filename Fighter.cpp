@@ -148,3 +148,36 @@ void Fighter::onLevelUp()
 			break;
 	}
 }
+
+void Fighter::setLevel(int newLevel)
+{
+
+	level = newLevel;
+	onLevelUp();
+}
+
+
+int Fighter::getLevel()
+{
+	return level;
+}
+
+int Fighter::getBAB()
+{
+	return BAB;
+}
+
+int Fighter::getFortSave()
+{
+	return fortSave;
+}
+
+int Fighter::getWillSave()
+{
+	return willSave;
+}
+
+int Fighter::getReflexSave()
+{
+	return reflexSave;
+}

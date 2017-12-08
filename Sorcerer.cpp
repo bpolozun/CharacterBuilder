@@ -22,8 +22,7 @@ Sorcerer::~Sorcerer()
 {
 }
 
-void Sorcerer::onLevelUp()
-{
+void Sorcerer::onLevelUp() {
 	switch (level) {
 	case 1:
 		spellsPerDay[0] = 3;
@@ -346,3 +345,42 @@ void Sorcerer::onLevelUp()
 		reflexSave = 6;
 		break;
 	}
+}
+
+void Sorcerer::setLevel(int newLevel)
+{
+
+	level = newLevel;
+	onLevelUp();
+}
+
+
+int Sorcerer::getLevel()
+{
+	return level;
+}
+
+int Sorcerer::getBAB()
+{
+	return BAB;
+}
+
+int Sorcerer::getFortSave()
+{
+	return fortSave;
+}
+
+int Sorcerer::getWillSave()
+{
+	return willSave;
+}
+
+int Sorcerer::getReflexSave()
+{
+	return reflexSave;
+}
+
+int Sorcerer::getSpellsPerDay(int spellLevel)
+{
+	return spellsPerDay[spellLevel];
+}
