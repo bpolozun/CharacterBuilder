@@ -1,7 +1,5 @@
 #pragma once
 #include "Class.h"
-#include "Spell.h"
-#include <vector>
 class Cleric :
 	public Class
 {

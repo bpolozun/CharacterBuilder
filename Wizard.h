@@ -1,13 +1,11 @@
 #pragma once
 #include "Class.h"
-#include "Spell.h"
 #include <vector>
 class Wizard :
 	public Class
 {
 
 private:
-	std::vector<Spell> spellList;
 	int spellsPerDay[9];
 public:
 	Wizard();
@@ -21,6 +19,5 @@ public:
 	int getReflexSave();
 	int getSpellsPerDay(int spellLevel);
 	std::string getSpecial();
-	std::vector<Spell> spellList();
 };
 

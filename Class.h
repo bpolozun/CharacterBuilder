@@ -32,8 +32,6 @@ public:
 	int getSkillPointPerLevel();
 	int getFeatProgression();
 	int getHitPoints();
-	void increaseLevel();
-	void decreaseLevel();
 
 };
 

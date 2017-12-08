@@ -38,6 +38,7 @@ void Paladin::onLevelUp()
 		willSave = 2;
 		smiteEvil = 1;
 		layOnHands = 0;
+		hitPoints = 5 * level;
 		break;
 	case 2:
 		spellsPerDay[0] = 0;
@@ -50,6 +51,7 @@ void Paladin::onLevelUp()
 		willSave = 3;
 		smiteEvil = 1;
 			layOnHands = 1;
+			hitPoints = 5 * level;
 		break;
 	case 3:
 		spellsPerDay[0] = 0;
@@ -62,6 +64,7 @@ void Paladin::onLevelUp()
 		willSave = 3;
 		smiteEvil = 1;
 		layOnHands = 1;
+		hitPoints = 5 * level;
 		break;
 	case 4:
 		spellsPerDay[0] = 0;
@@ -74,6 +77,7 @@ void Paladin::onLevelUp()
 		willSave = 4;
 		smiteEvil = 2;
 		layOnHands = 2;
+		hitPoints = 5 * level;
 		break;
 	case 5:
 		spellsPerDay[0] = 0;
@@ -86,6 +90,7 @@ void Paladin::onLevelUp()
 		willSave = 4;
 		smiteEvil = 2;
 		layOnHands = 2;
+		hitPoints = 5 * level;
 		break;
 	case 6:
 		spellsPerDay[0] = 1;
@@ -98,6 +103,7 @@ void Paladin::onLevelUp()
 		willSave = 5;
 		smiteEvil = 2;
 		layOnHands = 3;
+		hitPoints = 5 * level;
 		break;
 	case 7:
 		spellsPerDay[0] = 1;
@@ -110,6 +116,7 @@ void Paladin::onLevelUp()
 		willSave - 5;
 		smiteEvil = 3;
 		layOnHands = 3;
+		hitPoints = 5 * level;
 		break;
 	case 8:
 		spellsPerDay[0] = 1;
@@ -122,6 +129,7 @@ void Paladin::onLevelUp()
 		willSave = 6;
 		smiteEvil = 3;
 		layOnHands = 4;
+		hitPoints = 5 * level;
 		break;
 	case 9:
 		spellsPerDay[0] = 2;
@@ -134,6 +142,7 @@ void Paladin::onLevelUp()
 		willSave = 6;
 		smiteEvil = 3;
 		layOnHands = 4;
+		hitPoints = 5 * level;
 		break;
 	case 10:
 		spellsPerDay[0] = 2;
@@ -146,6 +155,7 @@ void Paladin::onLevelUp()
 		willSave = 7;
 		smiteEvil = 4;
 		layOnHands = 5;
+		hitPoints = 5 * level;
 		break;
 	case 11:
 		spellsPerDay[0] = 2;
@@ -158,6 +168,7 @@ void Paladin::onLevelUp()
 		willSave = 7;
 		smiteEvil = 4;
 		layOnHands = 5;
+		hitPoints = 5 * level;
 		break;
 	case 12:
 		spellsPerDay[0] = 2;
@@ -170,6 +181,7 @@ void Paladin::onLevelUp()
 		willSave = 8;
 		smiteEvil = 4;
 		layOnHands = 6;
+		hitPoints = 5 * level;
 		break;
 	case 13:
 		spellsPerDay[0] = 3;
@@ -182,6 +194,7 @@ void Paladin::onLevelUp()
 		willSave = 8;
 		smiteEvil = 5;
 		layOnHands = 6;
+		hitPoints = 5 * level;
 		break;
 	case 14:
 		spellsPerDay[0] = 3;
@@ -194,6 +207,7 @@ void Paladin::onLevelUp()
 		willSave = 9;
 		smiteEvil = 5;
 		layOnHands = 7;
+		hitPoints = 5 * level;
 		break;
 	case 15:
 		spellsPerDay[0] = 3;
@@ -206,6 +220,7 @@ void Paladin::onLevelUp()
 		willSave = 9;
 		smiteEvil = 5;
 		layOnHands = 7;
+		hitPoints = 5 * level;
 		break;
 	case 16:
 		spellsPerDay[0] = 3;
@@ -218,6 +233,7 @@ void Paladin::onLevelUp()
 		willSave = 10;
 		smiteEvil = 6;
 		layOnHands = 8;
+		hitPoints = 5 * level;
 		break;
 	case 17:
 		spellsPerDay[0] = 4;
@@ -230,6 +246,7 @@ void Paladin::onLevelUp()
 		willSave = 10;
 		layOnHands = 8;
 		smiteEvil = 6;
+		hitPoints = 5 * level;
 		break;
 	case 18:
 		spellsPerDay[0] = 4;
@@ -242,6 +259,7 @@ void Paladin::onLevelUp()
 		willSave = 11;
 		layOnHands = 9;
 		smiteEvil = 6;
+		hitPoints = 5 * level;
 		break;
 	case 19:
 		spellsPerDay[0] = 4;
@@ -254,6 +272,7 @@ void Paladin::onLevelUp()
 		willSave = 11;
 		layOnHands = 9;
 		smiteEvil = 6;
+		hitPoints = 5 * level;
 		break;
 	case 20:
 		spellsPerDay[0] = 4;
@@ -266,6 +285,7 @@ void Paladin::onLevelUp()
 		willSave = 12;
 		smiteEvil = 6;
 		layOnHands = 10;
+		hitPoints = 5 * level;
 		break;
 	}
 }

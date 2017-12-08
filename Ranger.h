@@ -1,6 +1,5 @@
 #pragma once
 #include "Class.h"
-#include "Spell.h"
 class Ranger :
 	public Class
 {

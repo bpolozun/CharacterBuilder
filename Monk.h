@@ -15,5 +15,6 @@ public:
 	int getFortSave();
 	int getWillSave();
 	int getReflexSave();
+	std::string getSpecial();
 };
 

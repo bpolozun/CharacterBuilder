@@ -42,6 +42,7 @@ void Rogue::onLevelUp()
 		fortSave = 0;
 		reflexSave = 2;
 		sneakAttack = 1;
+		hitPoints = 4 * level;
 		break;
 	case 2:
 		BAB = 2;
@@ -49,6 +50,7 @@ void Rogue::onLevelUp()
 		fortSave = 0;
 		reflexSave = 3;
 		sneakAttack = 1;
+		hitPoints = 4 * level;
 		break;
 	case 3:
 		BAB = 3;
@@ -56,6 +58,7 @@ void Rogue::onLevelUp()
 		fortSave = 1;
 		reflexSave = 3;
 		sneakAttack = 2;
+		hitPoints = 4 * level;
 		break;
 	case 4:
 		BAB = 4;
@@ -63,6 +66,7 @@ void Rogue::onLevelUp()
 		fortSave = 1;
 		reflexSave = 4;
 		sneakAttack = 2;
+		hitPoints = 4 * level;
 		break;
 	case 5:
 		BAB = 5;
@@ -70,6 +74,7 @@ void Rogue::onLevelUp()
 		fortSave = 1;
 		reflexSave = 4;
 		sneakAttack = 3;
+		hitPoints = 4 * level;
 		break;
 	case 6:
 		BAB = 6;
@@ -77,6 +82,7 @@ void Rogue::onLevelUp()
 		fortSave = 2;
 		reflexSave = 5;
 		sneakAttack = 3;
+		hitPoints = 4 * level;
 		break;
 	case 7:
 		BAB = 7;
@@ -84,6 +90,7 @@ void Rogue::onLevelUp()
 		fortSave = 2;
 		reflexSave = 5;
 		sneakAttack = 4;
+		hitPoints = 4 * level;
 		break;
 	case 8:
 		BAB = 8;
@@ -91,6 +98,7 @@ void Rogue::onLevelUp()
 		fortSave = 2;
 		reflexSave = 6;
 		sneakAttack = 4;
+		hitPoints = 4 * level;
 		break;
 	case 9:
 		BAB = 9;
@@ -98,6 +106,7 @@ void Rogue::onLevelUp()
 		fortSave = 3;
 		reflexSave = 6;
 		sneakAttack = 5;
+		hitPoints = 4 * level;
 		break;
 	case 10:
 		BAB = 10;
@@ -105,6 +114,7 @@ void Rogue::onLevelUp()
 		fortSave = 3;
 		reflexSave = 8;
 		sneakAttack = 5;
+		hitPoints = 4 * level;
 		break;
 	case 11:
 		BAB = 11;
@@ -112,6 +122,7 @@ void Rogue::onLevelUp()
 		fortSave = 4;
 		reflexSave = 8;
 		sneakAttack = 6;
+		hitPoints = 4 * level;
 		break;
 	case 12:
 		BAB = 12;
@@ -120,6 +131,7 @@ void Rogue::onLevelUp()
 		fortSave = 4;
 		reflexSave = 8;
 		sneakAttack = 6;
+		hitPoints = 4 * level;
 		break;
 	case 13:
 		BAB = 13;
@@ -127,6 +139,7 @@ void Rogue::onLevelUp()
 		fortSave = 4;
 		reflexSave = 8;
 		sneakAttack = 7;
+		hitPoints = 4 * level;
 		break;
 	case 14:
 		BAB = 14;
@@ -134,6 +147,7 @@ void Rogue::onLevelUp()
 		fortSave = 4;
 		reflexSave = 9;
 		sneakAttack = 7;
+		hitPoints = 4 * level;
 		break;
 	case 15:
 		BAB = 15;
@@ -141,6 +155,7 @@ void Rogue::onLevelUp()
 		fortSave = 5;
 		reflexSave = 9;
 		sneakAttack = 8;
+		hitPoints = 4 * level;
 		break;
 	case 16:
 		BAB = 16;
@@ -148,6 +163,7 @@ void Rogue::onLevelUp()
 		fortSave = 5;
 		reflexSave = 10;
 		sneakAttack = 8;
+		hitPoints = 4 * level;
 		break;
 	case 17:
 		BAB = 17;
@@ -155,6 +171,7 @@ void Rogue::onLevelUp()
 		fortSave = 5;
 		reflexSave = 10;
 		sneakAttack = 9;
+		hitPoints = 4 * level;
 		break;
 	case 18:
 		BAB = 18;
@@ -162,6 +179,7 @@ void Rogue::onLevelUp()
 		fortSave = 6;
 		reflexSave = 11;
 		sneakAttack = 9;
+		hitPoints = 4 * level;
 		break;
 	case 19:
 		BAB = 19;
@@ -169,6 +187,7 @@ void Rogue::onLevelUp()
 		fortSave = 6;
 		reflexSave = 11; 
 		sneakAttack = 10;
+		hitPoints = 4 * level;
 		break;
 	case 20:
 		BAB = 20;
@@ -176,6 +195,7 @@ void Rogue::onLevelUp()
 		fortSave = 6;
 		reflexSave = 12; 
 		sneakAttack = 10;
+		hitPoints = 4 * level;
 		break;
 	}
 }

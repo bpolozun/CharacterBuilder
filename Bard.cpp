@@ -1,5 +1,4 @@
 #include "Bard.h"
-#include "Spell.h"
 
 
 
@@ -48,6 +47,7 @@ void Bard::onLevelUp()
 		fortSave = 0;
 		reflexSave = 2;
 		willSave = 2;
+		hitPoints = 4 * level;
 		break;
 	case 2:
 		spellsPerDay[0] = 2;
@@ -60,6 +60,7 @@ void Bard::onLevelUp()
 		fortSave = 0;
 		reflexSave = 3;
 		willSave = 3;
+		hitPoints = 4 * level;
 		break;
 	case 3:
 		spellsPerDay[0] = 3;
@@ -72,6 +73,7 @@ void Bard::onLevelUp()
 		fortSave = 1;
 		reflexSave = 3;
 		willSave = 3;
+		hitPoints = 4 * level;
 		break;
 	case 4:
 		spellsPerDay[0] = 3;
@@ -84,6 +86,7 @@ void Bard::onLevelUp()
 		fortSave = 1;
 		reflexSave = 4;
 		willSave = 4;
+		hitPoints = 4 * level;
 		break;
 	case 5:
 		spellsPerDay[0] = 4;
@@ -96,6 +99,7 @@ void Bard::onLevelUp()
 		fortSave = 1;
 		reflexSave = 4;
 		willSave = 4;
+		hitPoints = 4 * level;
 		break;
 	case 6:
 		spellsPerDay[0] = 4;
@@ -108,6 +112,7 @@ void Bard::onLevelUp()
 		fortSave = 2;
 		willSave = 5;
 		reflexSave = 5;
+		hitPoints = 4 * level;
 		break;
 	case 7:
 		spellsPerDay[0] = 3;
@@ -120,6 +125,7 @@ void Bard::onLevelUp()
 		fortSave = 2;
 		reflexSave = 5;
 		willSave = 5;
+		hitPoints = 4 * level;
 		break;
 	case 8:
 		spellsPerDay[0] = 4;
@@ -132,6 +138,7 @@ void Bard::onLevelUp()
 		fortSave = 2;
 		reflexSave = 5;
 		willSave = 5;
+		hitPoints = 4 * level;
 		break;
 	case 9:
 		spellsPerDay[0] = 5;
@@ -144,6 +151,7 @@ void Bard::onLevelUp()
 		fortSave = 3;
 		reflexSave = 6;
 		willSave = 6;
+		hitPoints = 4 * level;
 		break;
 	case 10:
 		spellsPerDay[0] = 5;
@@ -156,6 +164,7 @@ void Bard::onLevelUp()
 		fortSave = 3;
 		reflexSave = 7;
 		willSave = 7;
+		hitPoints = 4 * level;
 		break;
 	case 11:
 		spellsPerDay[0] = 5;
@@ -168,6 +177,7 @@ void Bard::onLevelUp()
 		fortSave = 3;
 		willSave = 7;
 		reflexSave = 7;
+		hitPoints = 4 * level;
 		break;
 	case 12:		
 		spellsPerDay[0] = 5;
@@ -180,6 +190,7 @@ void Bard::onLevelUp()
 		fortSave = 4;
 		reflexSave = 8;
 		willSave = 8;
+		hitPoints = 4 * level;
 		break;
 	case 13:
 		spellsPerDay[0] = 5;
@@ -192,6 +203,7 @@ void Bard::onLevelUp()
 		fortSave = 4;
 		reflexSave = 8;
 		willSave = 8;
+		hitPoints = 4 * level;
 		break;
 	case 14:
 		spellsPerDay[0] = 5;
@@ -204,6 +216,7 @@ void Bard::onLevelUp()
 		fortSave = 4;
 		reflexSave = 9;
 		willSave = 9;
+		hitPoints = 4 * level;
 		break;
 	case 15:
 		spellsPerDay[0] = 5;
@@ -216,6 +229,7 @@ void Bard::onLevelUp()
 		fortSave = 5;
 		reflexSave = 9;
 		willSave = 9;
+		hitPoints = 4 * level;
 		break;
 	case 16:
 		spellsPerDay[0] = 5;
@@ -228,6 +242,7 @@ void Bard::onLevelUp()
 		fortSave = 5;
 		reflexSave = 10;
 		willSave = 10;
+		hitPoints = 4 * level;
 		break;
 	case 17:
 		spellsPerDay[0] = 5;
@@ -240,6 +255,7 @@ void Bard::onLevelUp()
 		fortSave = 5;
 		reflexSave = 10;
 		willSave = 10;
+		hitPoints = 4 * level;
 		break;
 	case 18:
 		spellsPerDay[0] = 5;
@@ -252,6 +268,7 @@ void Bard::onLevelUp()
 		fortSave = 6;
 		reflexSave = 11;
 		willSave = 11;
+		hitPoints = 4 * level;
 		break;
 	case 19:
 		spellsPerDay[0] = 5;
@@ -264,6 +281,7 @@ void Bard::onLevelUp()
 		fortSave = 6;
 		reflexSave = 11;
 		willSave = 11;
+		hitPoints = 4 * level;
 		break;
 	case 20:
 		spellsPerDay[0] = 5;
@@ -276,6 +294,7 @@ void Bard::onLevelUp()
 		fortSave = 6;
 		reflexSave = 12;
 		willSave = 12;
+		hitPoints = 4 * level;
 		break;
 	}
 }

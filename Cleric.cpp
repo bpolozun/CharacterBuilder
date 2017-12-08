@@ -1,5 +1,4 @@
 #include "Cleric.h"
-#include "Spell.h"
 
 
 
@@ -45,6 +44,7 @@ void Cleric::onLevelUp()
 		fortSave = 2;
 		reflexSave = 0;
 			channelEnergy = 1;
+			hitPoints = 4 * level;
 		break;
 	case 2:
 		spellsPerDay[0] = 4;
@@ -62,6 +62,7 @@ void Cleric::onLevelUp()
 		fortSave = 3;
 		reflexSave = 0;
 		channelEnergy = 1;
+		hitPoints = 4 * level;
 		break;
 	case 3:
 		spellsPerDay[0] = 4;
@@ -79,6 +80,7 @@ void Cleric::onLevelUp()
 		fortSave = 3;
 		reflexSave = 1;
 		channelEnergy = 2;
+		hitPoints = 4 * level;
 		break;
 	case 4:
 		spellsPerDay[0] = 4;
@@ -96,6 +98,7 @@ void Cleric::onLevelUp()
 		fortSave = 4;
 		reflexSave = 1;
 		channelEnergy = 2;
+		hitPoints = 4 * level;
 		break;
 	case 5:
 		spellsPerDay[0] = 4;
@@ -113,6 +116,7 @@ void Cleric::onLevelUp()
 		fortSave = 1;
 		reflexSave = 4;
 		channelEnergy = 3;
+		hitPoints = 4 * level;
 		break;
 	case 6:
 		spellsPerDay[0] = 4;
@@ -130,6 +134,7 @@ void Cleric::onLevelUp()
 		fortSave = 5;
 		reflexSave = 2;
 		channelEnergy = 3;
+		hitPoints = 4 * level;
 		break;
 	case 7:
 		spellsPerDay[0] = 4;
@@ -147,6 +152,7 @@ void Cleric::onLevelUp()
 		fortSave = 5;
 		reflexSave = 2;
 		channelEnergy = 4;
+		hitPoints = 4 * level;
 		break;
 	case 8:
 		spellsPerDay[0] = 4;
@@ -164,6 +170,7 @@ void Cleric::onLevelUp()
 		fortSave = 6;
 		reflexSave = 2;
 		channelEnergy = 4;
+		hitPoints = 4 * level;
 		break;
 	case 9:
 		spellsPerDay[0] = 4;
@@ -181,6 +188,7 @@ void Cleric::onLevelUp()
 		fortSave = 6;
 		reflexSave = 3;
 		channelEnergy = 5;
+		hitPoints = 4 * level;
 		break;
 	case 10:
 		spellsPerDay[0] = 4;
@@ -198,6 +206,7 @@ void Cleric::onLevelUp()
 		fortSave = 7;
 		reflexSave = 3;
 		channelEnergy = 5;
+		hitPoints = 4 * level;
 		break;
 	case 11:
 		spellsPerDay[0] = 4;
@@ -215,6 +224,7 @@ void Cleric::onLevelUp()
 		fortSave = 7;
 		reflexSave = 3;
 		channelEnergy = 6;
+		hitPoints = 4 * level;
 		break;
 	case 12:
 		spellsPerDay[0] = 4;
@@ -232,6 +242,7 @@ void Cleric::onLevelUp()
 		fortSave = 8;
 		reflexSave = 4;
 		channelEnergy = 6;
+		hitPoints = 4 * level;
 		break;
 	case 13:
 		spellsPerDay[0] = 4;
@@ -249,6 +260,7 @@ void Cleric::onLevelUp()
 		fortSave = 8;
 		reflexSave = 4;
 		channelEnergy = 7;
+		hitPoints = 4 * level;
 		break;
 	case 14:
 		spellsPerDay[0] = 4;
@@ -266,6 +278,7 @@ void Cleric::onLevelUp()
 		fortSave = 9;
 		reflexSave = 4;
 		channelEnergy = 7;
+		hitPoints = 4 * level;
 		break;
 	case 15:
 		spellsPerDay[0] = 4;
@@ -283,6 +296,7 @@ void Cleric::onLevelUp()
 		fortSave = 9;
 		reflexSave = 5;
 		channelEnergy = 8;
+		hitPoints = 4 * level;
 		break;
 	case 16:
 		spellsPerDay[0] = 4;
@@ -300,6 +314,7 @@ void Cleric::onLevelUp()
 		fortSave = 10;
 		reflexSave = 5;
 		channelEnergy = 8;
+		hitPoints = 4 * level;
 		break;
 	case 17:
 		spellsPerDay[0] = 4;
@@ -317,6 +332,7 @@ void Cleric::onLevelUp()
 		fortSave = 10;
 		reflexSave = 5;
 		channelEnergy = 9;
+		hitPoints = 4 * level;
 		break;
 	case 18:
 		spellsPerDay[0] = 4;
@@ -334,6 +350,7 @@ void Cleric::onLevelUp()
 		fortSave = 11;
 		reflexSave = 6;
 		channelEnergy = 9;
+		hitPoints = 4 * level;
 		break;
 	case 19:
 		spellsPerDay[0] = 4;
@@ -351,6 +368,7 @@ void Cleric::onLevelUp()
 		fortSave = 11;
 		reflexSave = 6;
 		channelEnergy = 10;
+		hitPoints = 4 * level;
 		break;
 	case 20:
 		spellsPerDay[0] = 4;
@@ -368,6 +386,7 @@ void Cleric::onLevelUp()
 		fortSave = 12;
 		reflexSave = 6;
 		channelEnergy = 10;
+		hitPoints = 4 * level;
 		break;
 	}
 }

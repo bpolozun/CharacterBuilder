@@ -39,6 +39,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 3;
 		fortSave = 0;
 		reflexSave = 0;
+		hitPoints = 3 * level;
 		break;
 	case 2:
 		spellsPerDay[0] = 4;
@@ -55,6 +56,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 3;
 		fortSave = 0;
 		reflexSave = 0;
+		hitPoints = 3 * level;
 		break;
 	case 3:
 		spellsPerDay[0] = 4;
@@ -71,6 +73,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 3;
 		fortSave = 1;
 		reflexSave = 1;
+		hitPoints = 3 * level;
 		break;
 	case 4:
 		spellsPerDay[0] = 4;
@@ -87,6 +90,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 4;
 		fortSave = 1;
 		reflexSave = 1;
+		hitPoints = 3 * level;
 		break;
 	case 5:
 		spellsPerDay[0] = 4;
@@ -103,6 +107,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 4;
 		fortSave = 1;
 		reflexSave = 1;
+		hitPoints = 3 * level;
 		break;
 	case 6:
 		spellsPerDay[0] = 4;
@@ -119,6 +124,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 5;
 		fortSave = 2;
 		reflexSave = 2;
+		hitPoints = 3 * level;
 		break;
 	case 7:
 		spellsPerDay[0] = 4;
@@ -135,6 +141,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 5;
 		fortSave = 2;
 		reflexSave = 2;
+		hitPoints = 3 * level;
 		break;
 	case 8:
 		spellsPerDay[0] = 4;
@@ -151,6 +158,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 6;
 		fortSave = 2;
 		reflexSave = 2;
+		hitPoints = 3 * level;
 		break;
 	case 9:
 		spellsPerDay[0] = 4;
@@ -167,6 +175,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 6;
 		fortSave = 3;
 		reflexSave = 3;
+		hitPoints = 3 * level;
 		break;
 	case 10:
 		spellsPerDay[0] = 4;
@@ -183,6 +192,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 7;
 		fortSave = 2;
 		reflexSave = 2;
+		hitPoints = 3 * level;
 		break;
 	case 11:
 		spellsPerDay[0] = 4;
@@ -199,6 +209,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 7;
 		fortSave = 2;
 		reflexSave = 2;
+		hitPoints = 3 * level;
 		break;
 	case 12:
 		spellsPerDay[0] = 4;
@@ -215,6 +226,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 8;
 		fortSave = 4;
 		reflexSave = 4;
+		hitPoints = 3 * level;
 		break;
 	case 13:
 		spellsPerDay[0] = 4;
@@ -231,6 +243,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 8;
 		fortSave = 4;
 		reflexSave = 4;
+		hitPoints = 3 * level;
 		break;
 	case 14:
 		spellsPerDay[0] = 4;
@@ -247,6 +260,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 9;
 		fortSave = 4;
 		reflexSave = 4;
+		hitPoints = 3 * level;
 		break;
 	case 15:
 		spellsPerDay[0] = 4;
@@ -263,6 +277,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 9;
 		fortSave = 5;
 		reflexSave = 5;
+		hitPoints = 3 * level;
 		break;
 	case 16:
 		spellsPerDay[0] = 4;
@@ -279,6 +294,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 10;
 		fortSave = 5;
 		reflexSave = 5;
+		hitPoints = 3 * level;
 		break;
 	case 17:
 		spellsPerDay[0] = 4;
@@ -295,6 +311,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 10;
 		fortSave = 5;
 		reflexSave = 5;
+		hitPoints = 3 * level;
 		break;
 	case 18:
 		spellsPerDay[0] = 4;
@@ -311,6 +328,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 11;
 		fortSave = 6;
 		reflexSave = 6;
+		hitPoints = 3 * level;
 		break;
 	case 19:
 		spellsPerDay[0] = 4;
@@ -327,6 +345,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 11;
 		fortSave = 6;
 		reflexSave = 6;
+		hitPoints = 3 * level;
 		break;
 	case 20:
 		spellsPerDay[0] = 4;
@@ -343,6 +362,7 @@ void Sorcerer::onLevelUp() {
 		willSave = 12;
 		fortSave = 6;
 		reflexSave = 6;
+		hitPoints = 3 * level;
 		break;
 	}
 }

@@ -35,6 +35,7 @@ void Monk::onLevelUp()
 		fortSave = 2;
 		willSave = 2;
 		reflexSave = 2;
+		hitPoints = 4 * level;
 		break;
 	case 2:
 		kiPool = 0;
@@ -42,6 +43,7 @@ void Monk::onLevelUp()
 		fortSave = 3;
 		willSave = 3;
 		reflexSave = 3;
+		hitPoints = 4 * level;
 		break;
 	case 3:
 		kiPool = 0;
@@ -49,6 +51,7 @@ void Monk::onLevelUp()
 		fortSave = 3;
 		willSave = 3;
 		reflexSave = 3;
+		hitPoints = 4 * level;
 		break;
 	case 4:
 		kiPool = 2;
@@ -56,6 +59,7 @@ void Monk::onLevelUp()
 		fortSave = 4;
 		willSave = 4;
 		reflexSave = 4;
+		hitPoints = 4 * level;
 		break;
 	case 5:
 		kiPool = 2;
@@ -63,6 +67,7 @@ void Monk::onLevelUp()
 		fortSave = 4;
 		willSave = 4;
 		reflexSave = 4;
+		hitPoints = 4 * level;
 		break;
 	case 6:
 		kiPool = 3;
@@ -70,6 +75,7 @@ void Monk::onLevelUp()
 		fortSave = 5;
 		willSave = 5;
 		reflexSave = 5;
+		hitPoints = 4 * level;
 		break;
 	case 7:
 		kiPool = 3;
@@ -77,6 +83,7 @@ void Monk::onLevelUp()
 		fortSave = 5;
 		willSave = 5;
 		reflexSave = 5;
+		hitPoints = 4 * level;
 		break;
 	case 8:
 		kiPool = 4;
@@ -84,6 +91,7 @@ void Monk::onLevelUp()
 		fortSave = 6;
 		willSave = 6;
 		reflexSave = 6;
+		hitPoints = 4 * level;
 		break;
 	case 9:
 		kiPool = 4;
@@ -91,6 +99,7 @@ void Monk::onLevelUp()
 		fortSave = 6;
 		willSave = 6;
 		reflexSave = 6;
+		hitPoints = 4 * level;
 		break;
 	case 10:
 		kiPool = 5;
@@ -98,6 +107,7 @@ void Monk::onLevelUp()
 		fortSave = 7;
 		willSave = 7;
 		reflexSave = 7;
+		hitPoints = 4 * level;
 		break;
 	case 11:
 		kiPool = 5;
@@ -105,6 +115,7 @@ void Monk::onLevelUp()
 		fortSave = 7;
 		willSave = 7;
 		reflexSave = 7;
+		hitPoints = 4 * level;
 		break;
 	case 12:
 		kiPool = 6;
@@ -112,6 +123,7 @@ void Monk::onLevelUp()
 		fortSave = 8;
 		willSave = 8;
 		reflexSave = 8;
+		hitPoints = 4 * level;
 		break;
 	case 13:
 		kiPool = 6;
@@ -119,6 +131,7 @@ void Monk::onLevelUp()
 		fortSave = 8;
 		willSave = 8;
 		reflexSave = 8;
+		hitPoints = 4 * level;
 		break;
 	case 14:
 		kiPool = 7;
@@ -126,6 +139,7 @@ void Monk::onLevelUp()
 		fortSave = 9;
 		willSave = 9;
 		reflexSave = 9;
+		hitPoints = 4 * level;
 		break;
 	case 15:
 		kiPool = 7;
@@ -133,6 +147,7 @@ void Monk::onLevelUp()
 		fortSave = 9;
 		willSave = 9;
 		reflexSave = 9;
+		hitPoints = 4 * level;
 		break;
 	case 16:
 		kiPool = 8;
@@ -140,6 +155,7 @@ void Monk::onLevelUp()
 		fortSave = 10;
 		willSave = 10;
 		reflexSave = 10;
+		hitPoints = 4 * level;
 		break;
 	case 17:
 		kiPool = 8;
@@ -147,6 +163,7 @@ void Monk::onLevelUp()
 		fortSave = 10;
 		willSave = 10;
 		reflexSave = 10;
+		hitPoints = 4 * level;
 		break;
 	case 18:
 		kiPool = 9;
@@ -154,6 +171,7 @@ void Monk::onLevelUp()
 		fortSave = 11;
 		willSave = 11;
 		reflexSave = 11;
+		hitPoints = 4 * level;
 		break;
 	case 19:
 		kiPool = 9;
@@ -161,6 +179,7 @@ void Monk::onLevelUp()
 		fortSave = 11;
 		willSave = 11;
 		reflexSave = 11;
+		hitPoints = 4 * level;
 		break;
 	case 20:
 		kiPool = 10;
@@ -168,6 +187,7 @@ void Monk::onLevelUp()
 		fortSave = 12;
 		willSave = 12;
 		reflexSave = 12;
+		hitPoints = 4 * level;
 		break;
 	}
 }
@@ -203,4 +223,12 @@ int Monk::getWillSave()
 int Monk::getReflexSave()
 {
 	return reflexSave;
+}
+
+std::string Monk::getSpecial()
+{
+	std::string returnString = "A monk can use their ki pool for a variety of different feats. You have ";
+	returnString += kiPool;
+	returnString += " points in your pool. Consult your player's handbook for more information.";
+	return returnString;
 }

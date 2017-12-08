@@ -42,6 +42,7 @@ void Ranger::onLevelUp()
 		reflexSave = 2;
 		willSave = 0;
 		favoredEnemy = 1;
+		hitPoints = 5 * level;
 		break;
 	case 2:
 		spellsPerDay[0] = 0;
@@ -53,6 +54,7 @@ void Ranger::onLevelUp()
 		reflexSave = 3;
 		willSave = 0;
 		favoredEnemy = 1;
+		hitPoints = 5 * level;
 		break;
 	case 3:
 		spellsPerDay[0] = 0;
@@ -64,6 +66,7 @@ void Ranger::onLevelUp()
 		reflexSave = 3;
 		willSave = 1;
 		favoredEnemy = 1;
+		hitPoints = 5 * level;
 		break;
 	case 4:
 		spellsPerDay[0] = 0;
@@ -75,6 +78,7 @@ void Ranger::onLevelUp()
 		reflexSave = 4;
 		willSave = 1;
 		favoredEnemy = 1;
+		hitPoints = 5 * level;
 		break;
 	case 5:
 		spellsPerDay[0] = 0;
@@ -86,6 +90,7 @@ void Ranger::onLevelUp()
 		reflexSave = 4;
 		willSave = 1;
 		favoredEnemy = 2;
+		hitPoints = 5 * level;
 		break;
 	case 6:
 		spellsPerDay[0] = 1;
@@ -97,6 +102,7 @@ void Ranger::onLevelUp()
 		reflexSave = 5;
 		willSave = 2;
 		favoredEnemy = 2;
+		hitPoints = 5 * level;
 		break;
 	case 7:
 		spellsPerDay[0] = 1;
@@ -108,6 +114,7 @@ void Ranger::onLevelUp()
 		reflexSave = 5;
 		willSave - 2;
 		favoredEnemy = 2;
+		hitPoints = 5 * level;
 		break;
 	case 8:
 		spellsPerDay[0] = 1;
@@ -119,6 +126,7 @@ void Ranger::onLevelUp()
 		reflexSave = 6;
 		willSave = 2;
 		favoredEnemy = 2;
+		hitPoints = 5 * level;
 		break;
 	case 9:
 		spellsPerDay[0] = 2;
@@ -130,6 +138,7 @@ void Ranger::onLevelUp()
 		reflexSave = 6;
 		willSave = 3;
 		favoredEnemy = 2;
+		hitPoints = 5 * level;
 		break;
 	case 10:
 		spellsPerDay[0] = 2;
@@ -141,6 +150,7 @@ void Ranger::onLevelUp()
 		reflexSave = 7;
 		willSave = 3;
 		favoredEnemy = 3;
+		hitPoints = 5 * level;
 		break;
 	case 11:
 		spellsPerDay[0] = 2;
@@ -152,6 +162,7 @@ void Ranger::onLevelUp()
 		reflexSave = 7;
 		willSave = 3;
 		favoredEnemy = 3;
+		hitPoints = 5 * level;
 		break;
 	case 12:
 		spellsPerDay[0] = 2;
@@ -163,6 +174,7 @@ void Ranger::onLevelUp()
 		reflexSave = 8;
 		willSave = 4;
 		favoredEnemy = 3;
+		hitPoints = 5 * level;
 		break;
 	case 13:
 		spellsPerDay[0] = 3;
@@ -174,6 +186,7 @@ void Ranger::onLevelUp()
 		reflexSave = 8;
 		willSave = 4;
 		favoredEnemy = 3;
+		hitPoints = 5 * level;
 		break;
 	case 14:
 		spellsPerDay[0] = 3;
@@ -185,6 +198,7 @@ void Ranger::onLevelUp()
 		reflexSave = 9;
 		willSave = 4;
 		favoredEnemy = 3;
+		hitPoints = 5 * level;
 		break;
 	case 15:
 		spellsPerDay[0] = 3;
@@ -196,6 +210,7 @@ void Ranger::onLevelUp()
 		reflexSave = 9;
 		willSave = 5;
 		favoredEnemy = 4;
+		hitPoints = 5 * level;
 		break;
 	case 16:
 		spellsPerDay[0] = 3;
@@ -207,6 +222,7 @@ void Ranger::onLevelUp()
 		reflexSave = 10;
 		willSave = 5;
 
+		hitPoints = 5 * level;
 		favoredEnemy = 4;
 		break;
 	case 17:
@@ -219,6 +235,7 @@ void Ranger::onLevelUp()
 		reflexSave = 10;
 		willSave = 5;
 
+		hitPoints = 5 * level;
 		favoredEnemy = 4;
 		break;
 	case 18:
@@ -231,6 +248,7 @@ void Ranger::onLevelUp()
 		reflexSave = 11;
 		willSave = 6;
 
+		hitPoints = 5 * level;
 		favoredEnemy = 4;
 		break;
 	case 19:
@@ -243,6 +261,7 @@ void Ranger::onLevelUp()
 		reflexSave = 11;
 		willSave = 6;
 
+		hitPoints = 5 * level;
 		favoredEnemy = 4;
 		break;
 	case 20:
@@ -255,6 +274,7 @@ void Ranger::onLevelUp()
 		reflexSave = 12;
 		willSave = 6;
 		favoredEnemy = 5;
+		hitPoints = 5 * level;
 		break;
 	}
 }

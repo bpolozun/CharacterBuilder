@@ -52,19 +52,3 @@ int Class::getHitPoints()
 	return hitPoints;
 }
 
-void Class::increaseLevel()
-{
-	level++;
-	BAB += 1 * BABMod;
-	hitPoints += .5*hitDice;
-}
-
-void Class::decreaseLevel()
-{
-	{
-		level--;
-		BAB -= 1 * BABMod;
-		hitPoints -= .5*hitDice;
-	}
-}
-
