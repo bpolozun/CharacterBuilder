@@ -16,3 +16,12 @@ Race::~Race() {
 	// TODO Auto-generated destructor stub
 }
 
+int Race::getRaceID()
+{
+	return raceID;
+}
+
+int Race::getAttributeMods(int index)
+{
+	return attributeMods[index];
+}

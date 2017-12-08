@@ -19,20 +19,24 @@ Class::~Class() {
 	// TODO Auto-generated destructor stub
 }
 
+void Class::setLevel(int newLevel)
+{
+}
+
 
 int Class::getRestriction()
 {
 	return restriction;
 }
 
-int * Class::getSkillClass()
+int  Class::getSkillClass(int index)
 {
-	return skillClassArray;
+	return skillClassArray[index];
 }
 
-int * Class::getKnowledgeClass()
+int Class::getKnowledgeClass(int index)
 {
-	return knowledgeClassArray;
+	return knowledgeClassArray[index];
 }
 
 int Class::getBAB()
@@ -51,3 +55,22 @@ int Class::getHitPoints()
 	return hitPoints;
 }
 
+int Class::getLevel()
+{
+	return level;
+}
+
+int Class::getFortSave()
+{
+	return fortSave;
+}
+
+int Class::getWillSave()
+{
+	return willSave;
+}
+
+int Class::getRefSave()
+{
+	return reflexSave;
+}

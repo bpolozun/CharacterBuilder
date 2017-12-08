@@ -11,12 +11,14 @@
 #define RACE_H_
 
 class Race {
-private:
+protected:
 	std::string Name;
-
+	int raceID;
 	int attributeMods[6];
 public:
 	Race();
 	virtual ~Race();
+	int getRaceID();
+	int getAttributeMods(int index);
 };
 #endif /* RACE_H_ */

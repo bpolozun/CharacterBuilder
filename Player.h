@@ -13,8 +13,27 @@
 #include "Item.h"
 #include "Race.h"
 #include "Feat.h"
+#include "Human.H"
+#include "HalfElf.h"
+#include "Dwarf.h"
+#include "Halfling.h"
+#include "HalfOrc.h"
+#include "Gnome.h"
+#include "Elf.h"
+#include "Barbarian.h"
+#include "Bard.h"
+#include "Cleric.h"
+#include "Druid.h"
+#include "Fighter.h"
+#include "Monk.h"
+#include "Paladin.h"
+#include "Ranger.h"
+#include "Rogue.h"
+#include "Sorcerer.h"
+#include "Wizard.h"
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 
 class Player {
 
@@ -27,10 +46,23 @@ private:
 	//Races are user defined.
 	Race userRace;
 	//Dynamically sized array of items.
-	std::vector<Feat> featArray;
 	std::vector<Item> itemArray;
-	//As certain classes are mutually incompatible due to alignment restrictions, only seven classes can be stored. As such, this is a standard array.
-	Class classes[9];
+
+	/*Classes are in the following order:
+	0. Barbarian
+	1. Bard.
+	2. Cleric
+	3. Druid
+	4. Fighter
+	5. Monk
+	6. Paladin
+	7. Ranger
+	8. Rogue
+	9. Sorcerer
+	10. Wizard
+	*/
+	
+	Class classes[11];
 	int hitPoints;
 	/*
 	Stores the players skills in an array in the following order:
@@ -58,14 +90,25 @@ private:
 	21: Use Magic Device
 	*/
 	int skillsArray[21];
-	int skillModArray[20];
-	int craftArray[6];
+	int skillModArray[21];
 	/*
-	Knowledge skills are set 
+	Knowledge skills are set in the following order:
+	0. Arcana.
+	1. Dungeoneering
+	2. Engineering.
+	3. Geography.
+	4. History.
+	5. Local.
+	6. Nature.
+	7. Nobility.
+	8. Planes.
+	9. Religion.
 	*/
+	int ageCategory;
+	int ageAttributeMods[6];
+	int attributeBonuses[6];
 	int knowledgeArray[10];
 	int knowledgeModArray[10];
-	int ProfessionArray[30];
 	int alignmentGoodEvil;
 	int alignmentLawfulChaotic;
 	std::string playerName;
@@ -78,18 +121,33 @@ private:
 	int overallLevel;
 	int totalSkillPoints;
 	int totalFeats;
-	int availableFeats;
-	int availableSkills;
-	int usedFeats;
-	int usedSkills;
+	int willSave;
+	int reflexSave;
+	int fortitudeSave;
 
 
 public:
 	Player();
 	virtual ~Player();
+	void setName(std::string newName);
+	std::string getName();
+	void setAttributes(int str, int dex, int con, int inte, int wis, int cha);
+	int getAttribute(int index);
+	void setGender(bool newGender);
+	bool getGender();
+	int getBAB();
+	int getLevel();
+	int getTotalSkillPoints();
+	int getTotalFeats();
+	int getAge();
+	void setAge(int newAge);
+	int getWeight();
+	int getHeight();
+	void setClassLevel(int classLocation, int newLevel);
+
 
 	void setRace(Race race);
-	Race getRace();
+	int getRace();
 	void setAlignmentLawfulChaotic(int newAlignment);
 	int getAlightmentLawfulChaotic();
 	int getAlignmentGoodEvil();
@@ -97,13 +155,13 @@ public:
 
 	void addItem(Item item);
 	std::vector<Item> getInventory();
-	bool addClass(Class newClass);
-	Class getClasses();
+
 
 	void setSkillLevel(int skillLocation, int newValue);
 	int getSkillLevel(int skillLocation);
 
 	void onClassUpdate();
+	void updateAttributeMods();
 
 
 

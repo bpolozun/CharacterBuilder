@@ -4,7 +4,7 @@
 
 Barbarian::Barbarian()
 {
-	restriction = 1;
+	restriction = 0;
 	level = 1;
 	skillClassArray[0] = 3;
 	skillClassArray[3] = 3;

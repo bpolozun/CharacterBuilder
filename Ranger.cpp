@@ -4,7 +4,7 @@
 
 Ranger::Ranger()
 {
-	level = 1;
+	level = 0;
 	skillClassArray[3] = 3;
 	skillClassArray[9] = 3;
 	skillClassArray[10] = 3;

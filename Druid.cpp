@@ -5,7 +5,7 @@
 
 Druid::Druid()
 {
-	restriction = 2;
+	restriction = 0;
 	level = 1;
 	skillClassArray[3] = 3;
 	skillClassArray[8] = 3;

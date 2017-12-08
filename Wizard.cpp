@@ -4,7 +4,7 @@
 
 Wizard::Wizard()
 {
-	level = 1;
+	level = 0;
 	skillClassArray[1] = 3;
 	skillClassArray[8] = 3;
 	skillClassArray[17] = 3;

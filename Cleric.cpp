@@ -4,7 +4,7 @@
 
 Cleric::Cleric()
 {
-	level = 1;
+	level = 0;
 	skillClassArray[1] = 3;
 	skillClassArray[4] = 3;
 	skillClassArray[10] = 3;

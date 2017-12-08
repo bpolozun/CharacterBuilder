@@ -4,7 +4,7 @@
 
 Bard::Bard()
 {
-	level = 1;
+	level = 0;
 	skillClassArray[0] = 3;
 	skillClassArray[1] = 3;
 	skillClassArray[2] = 3;

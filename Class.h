@@ -24,12 +24,17 @@ protected:
 public:
 	Class();
 	virtual ~Class();
+	virtual void setLevel(int newLevel);
+	virtual int getLevel();
 	int getRestriction();
-	int* getSkillClass();
-	int* getKnowledgeClass();
+	int getSkillClass(int index);
+	int getKnowledgeClass(int index);
 	int getBAB();
 	int getSkillPointPerLevel();
 	int getHitPoints();
+	int getFortSave();
+	int getWillSave();
+	int getRefSave();
 
 };
 

@@ -5,7 +5,7 @@
 Monk::Monk()
 {
 	restriction = 3;
-	level = 1;
+	level = 0;
 	skillClassArray[0] = 3;
 	skillClassArray[3] = 3;
 	skillClassArray[7] = 3;
