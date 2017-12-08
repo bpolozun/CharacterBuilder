@@ -8,6 +8,7 @@
 
 #ifndef CLASS_H_
 #define CLASS_H_
+#include <string>
 class Class {
 protected:
 	int restriction;

@@ -3,6 +3,8 @@
 class Rogue :
 	public Class
 {
+private:
+	int sneakAttack;
 public:
 	Rogue();
 	~Rogue();
@@ -13,5 +15,6 @@ public:
 	int getFortSave();
 	int getWillSave();
 	int getReflexSave();
+	std::string getSpecial();
 };
 

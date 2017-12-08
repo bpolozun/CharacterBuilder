@@ -7,6 +7,7 @@ class Cleric :
 {
 private:
 	int spellsPerDay[9];
+	int channelEnergy;
 public:
 	Cleric();
 	~Cleric();
@@ -18,5 +19,6 @@ public:
 	int getWillSave();
 	int getReflexSave();
 	int getSpellsPerDay(int spellLevel);
+	std::string getSpecial();
 };
 

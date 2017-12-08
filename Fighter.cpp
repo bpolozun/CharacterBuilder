@@ -181,3 +181,8 @@ int Fighter::getReflexSave()
 {
 	return reflexSave;
 }
+
+std::string Fighter::getSpecial()
+{
+	return std::string("A fighter does not have any special bilities, relying on their bravery and strength of arms to see them to victory.");
+}

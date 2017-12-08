@@ -6,6 +6,7 @@ class Ranger :
 {
 private:
 	int spellsPerDay[4];
+	int favoredEnemy;
 public:
 	Ranger();
 
@@ -18,5 +19,6 @@ public:
 	int getWillSave();
 	int getReflexSave();
 	int getSpellsPerDay(int spellLevel);
+	std::string getSpecial();
 };
 

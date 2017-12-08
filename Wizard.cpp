@@ -385,3 +385,8 @@ int Wizard::getSpellsPerDay(int spellLevel)
 {
 	return spellsPerDay[spellLevel];
 }
+
+std::string Wizard::getSpecial()
+{
+	return std::string("Wizards do not have any special abilities outside of their spellcasting.");
+}

@@ -43,6 +43,7 @@ void Druid::onLevelUp()
 		willSave = 2;
 		fortSave = 2;
 		reflexSave = 0;
+		wildShape = 0;
 		break;
 	case 2:
 		spellsPerDay[0] = 4;
@@ -59,6 +60,7 @@ void Druid::onLevelUp()
 		willSave = 3;
 		fortSave = 3;
 		reflexSave = 0;
+		wildShape = 0;
 		break;
 	case 3:
 		spellsPerDay[0] = 4;
@@ -75,6 +77,7 @@ void Druid::onLevelUp()
 		willSave = 3;
 		fortSave = 3;
 		reflexSave = 1;
+		wildShape = 0;
 		break;
 	case 4:
 		spellsPerDay[0] = 4;
@@ -91,6 +94,7 @@ void Druid::onLevelUp()
 		willSave = 4;
 		fortSave = 4;
 		reflexSave = 1;
+		wildShape = 1;
 		break;
 	case 5:
 		spellsPerDay[0] = 4;
@@ -107,6 +111,7 @@ void Druid::onLevelUp()
 		willSave = 5;
 		fortSave = 5;
 		reflexSave = 2;
+		wildShape = 1;
 		break;
 	case 6:
 		spellsPerDay[0] = 4;
@@ -123,6 +128,7 @@ void Druid::onLevelUp()
 		willSave = 5;
 		fortSave = 5;
 		reflexSave = 2;
+		wildShape = 2;
 		break;
 	case 7:
 		spellsPerDay[0] = 4;
@@ -139,6 +145,7 @@ void Druid::onLevelUp()
 		willSave = 5;
 		fortSave = 5;
 		reflexSave = 2;
+		wildShape = 2;
 		break;
 	case 8:
 		spellsPerDay[0] = 4;
@@ -151,6 +158,7 @@ void Druid::onLevelUp()
 		spellsPerDay[7] = 0;
 		spellsPerDay[8] = 0;
 		spellsPerDay[9] = 0;
+		wildShape = 3;
 		BAB = 6;
 		willSave = 6;
 		fortSave = 6;
@@ -167,6 +175,7 @@ void Druid::onLevelUp()
 		spellsPerDay[7] = 0;
 		spellsPerDay[8] = 0;
 		spellsPerDay[9] = 0;
+		wildShape = 3;
 		BAB = 6;
 		willSave = 6;
 		fortSave = 6;
@@ -187,6 +196,7 @@ void Druid::onLevelUp()
 		willSave = 7;
 		fortSave = 7;
 		reflexSave = 3;
+		wildShape = 4;
 		break;
 	case 11:
 		spellsPerDay[0] = 4;
@@ -203,6 +213,7 @@ void Druid::onLevelUp()
 		willSave = 7;
 		fortSave = 7;
 		reflexSave = 3;
+		wildShape = 4;
 		break;
 	case 12:
 		spellsPerDay[0] = 4;
@@ -219,6 +230,7 @@ void Druid::onLevelUp()
 		willSave = 8;
 		fortSave = 8;
 		reflexSave = 4;
+		wildShape = 5;
 		break;
 	case 13:
 		spellsPerDay[0] = 4;
@@ -235,6 +247,7 @@ void Druid::onLevelUp()
 		willSave = 8;
 		fortSave = 8;
 		reflexSave = 4;
+		wildShape = 5;
 		break;
 	case 14:
 		spellsPerDay[0] = 4;
@@ -251,6 +264,7 @@ void Druid::onLevelUp()
 		willSave = 9;
 		fortSave = 9;
 		reflexSave = 4;
+		wildShape = 6;
 		break;
 	case 15:
 		spellsPerDay[0] = 4;
@@ -267,6 +281,7 @@ void Druid::onLevelUp()
 		willSave = 9;
 		fortSave = 9;
 		reflexSave = 5;
+		wildShape = 6;
 		break;
 	case 16:
 		spellsPerDay[0] = 4;
@@ -283,6 +298,7 @@ void Druid::onLevelUp()
 		willSave = 10;
 		fortSave = 10;
 		reflexSave = 5;
+		wildShape = 7;
 		break;
 	case 17:
 		spellsPerDay[0] = 4;
@@ -299,6 +315,7 @@ void Druid::onLevelUp()
 		willSave = 10;
 		fortSave = 10;
 		reflexSave = 5;
+		wildShape = 7;
 		break;
 	case 18:
 		spellsPerDay[0] = 4;
@@ -315,6 +332,7 @@ void Druid::onLevelUp()
 		willSave = 11;
 		fortSave = 11;
 		reflexSave = 6;
+		wildShape = 8;
 		break;
 	case 19:
 		spellsPerDay[0] = 4;
@@ -331,6 +349,7 @@ void Druid::onLevelUp()
 		willSave = 11;
 		fortSave = 11;
 		reflexSave = 6;
+			wildShape = 8;
 		break;
 	case 20:
 		spellsPerDay[0] = 4;
@@ -347,6 +366,7 @@ void Druid::onLevelUp()
 		willSave = 12;
 		fortSave = 12;
 		reflexSave = 6;
+		wildShape = 100000;
 		break;
 	}
 }
@@ -387,4 +407,17 @@ int Druid::getReflexSave()
 int Druid::getSpellsPerDay(int spellLevel)
 {
 	return spellsPerDay[spellLevel];
+}
+
+std::string Druid::getSpecial()
+{
+	std::string returnString = "A druid, as an agent of nature, may take the form of the many creatures of nature, though the range of transformations achieveable may vary depending on their level. You may take these forms ";
+	if (level < 20) {
+		returnString += wildShape;
+	}
+	else {
+		returnString += " an unlimited number of ";
+	}
+	returnString += " times per day. A druid also has a number of other useful abilities. Consult your player's handbook for more information.";
+	return returnString
 }

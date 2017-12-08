@@ -5,6 +5,8 @@ class Paladin :
 {
 private:
 	int spellsPerDay[6];
+	int smiteEvil;
+	int layOnHands;
 public:
 	Paladin();
 	~Paladin();
@@ -16,5 +18,6 @@ public:
 	int getWillSave();
 	int getReflexSave();
 	int getSpellsPerDay(int spellLevel);
+	std::string getSpecial();
 };
 

@@ -44,6 +44,7 @@ void Cleric::onLevelUp()
 		willSave = 2;
 		fortSave = 2;
 		reflexSave = 0;
+			channelEnergy = 1;
 		break;
 	case 2:
 		spellsPerDay[0] = 4;
@@ -60,6 +61,7 @@ void Cleric::onLevelUp()
 		willSave = 3;
 		fortSave = 3;
 		reflexSave = 0;
+		channelEnergy = 1;
 		break;
 	case 3:
 		spellsPerDay[0] = 4;
@@ -76,6 +78,7 @@ void Cleric::onLevelUp()
 		willSave = 3;
 		fortSave = 3;
 		reflexSave = 1;
+		channelEnergy = 2;
 		break;
 	case 4:
 		spellsPerDay[0] = 4;
@@ -92,6 +95,7 @@ void Cleric::onLevelUp()
 		willSave = 4;
 		fortSave = 4;
 		reflexSave = 1;
+		channelEnergy = 2;
 		break;
 	case 5:
 		spellsPerDay[0] = 4;
@@ -108,6 +112,7 @@ void Cleric::onLevelUp()
 		willSave = 4;
 		fortSave = 1;
 		reflexSave = 4;
+		channelEnergy = 3;
 		break;
 	case 6:
 		spellsPerDay[0] = 4;
@@ -124,6 +129,7 @@ void Cleric::onLevelUp()
 		willSave = 5;
 		fortSave = 5;
 		reflexSave = 2;
+		channelEnergy = 3;
 		break;
 	case 7:
 		spellsPerDay[0] = 4;
@@ -140,6 +146,7 @@ void Cleric::onLevelUp()
 		willSave = 5;
 		fortSave = 5;
 		reflexSave = 2;
+		channelEnergy = 4;
 		break;
 	case 8:
 		spellsPerDay[0] = 4;
@@ -156,6 +163,7 @@ void Cleric::onLevelUp()
 		willSave = 6;
 		fortSave = 6;
 		reflexSave = 2;
+		channelEnergy = 4;
 		break;
 	case 9:
 		spellsPerDay[0] = 4;
@@ -172,6 +180,7 @@ void Cleric::onLevelUp()
 		willSave = 6;
 		fortSave = 6;
 		reflexSave = 3;
+		channelEnergy = 5;
 		break;
 	case 10:
 		spellsPerDay[0] = 4;
@@ -188,6 +197,7 @@ void Cleric::onLevelUp()
 		willSave = 7;
 		fortSave = 7;
 		reflexSave = 3;
+		channelEnergy = 5;
 		break;
 	case 11:
 		spellsPerDay[0] = 4;
@@ -204,6 +214,7 @@ void Cleric::onLevelUp()
 		willSave = 7;
 		fortSave = 7;
 		reflexSave = 3;
+		channelEnergy = 6;
 		break;
 	case 12:
 		spellsPerDay[0] = 4;
@@ -220,6 +231,7 @@ void Cleric::onLevelUp()
 		willSave = 8;
 		fortSave = 8;
 		reflexSave = 4;
+		channelEnergy = 6;
 		break;
 	case 13:
 		spellsPerDay[0] = 4;
@@ -236,6 +248,7 @@ void Cleric::onLevelUp()
 		willSave = 8;
 		fortSave = 8;
 		reflexSave = 4;
+		channelEnergy = 7;
 		break;
 	case 14:
 		spellsPerDay[0] = 4;
@@ -252,6 +265,7 @@ void Cleric::onLevelUp()
 		willSave = 9;
 		fortSave = 9;
 		reflexSave = 4;
+		channelEnergy = 7;
 		break;
 	case 15:
 		spellsPerDay[0] = 4;
@@ -268,6 +282,7 @@ void Cleric::onLevelUp()
 		willSave = 9;
 		fortSave = 9;
 		reflexSave = 5;
+		channelEnergy = 8;
 		break;
 	case 16:
 		spellsPerDay[0] = 4;
@@ -284,6 +299,7 @@ void Cleric::onLevelUp()
 		willSave = 10;
 		fortSave = 10;
 		reflexSave = 5;
+		channelEnergy = 8;
 		break;
 	case 17:
 		spellsPerDay[0] = 4;
@@ -300,6 +316,7 @@ void Cleric::onLevelUp()
 		willSave = 10;
 		fortSave = 10;
 		reflexSave = 5;
+		channelEnergy = 9;
 		break;
 	case 18:
 		spellsPerDay[0] = 4;
@@ -316,6 +333,7 @@ void Cleric::onLevelUp()
 		willSave = 11;
 		fortSave = 11;
 		reflexSave = 6;
+		channelEnergy = 9;
 		break;
 	case 19:
 		spellsPerDay[0] = 4;
@@ -332,6 +350,7 @@ void Cleric::onLevelUp()
 		willSave = 11;
 		fortSave = 11;
 		reflexSave = 6;
+		channelEnergy = 10;
 		break;
 	case 20:
 		spellsPerDay[0] = 4;
@@ -348,6 +367,7 @@ void Cleric::onLevelUp()
 		willSave = 12;
 		fortSave = 12;
 		reflexSave = 6;
+		channelEnergy = 10;
 		break;
 	}
 }
@@ -387,4 +407,12 @@ void Cleric::setLevel(int newLevel)
 	int Cleric::getSpellsPerDay(int spellLevel)
 	{
 		return spellsPerDay[spellLevel];
+	}
+
+	std::string Cleric::getSpecial()
+	{
+		std::string returnString= "A cleric can channel energy, healing allies or harming undead for ";
+		returnString += channelEnergy;
+		returnString += "d6 in a 30 foot radius around them.";
+		return returnString;
 	}

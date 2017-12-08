@@ -41,6 +41,7 @@ void Ranger::onLevelUp()
 		fortSave = 2;
 		reflexSave = 2;
 		willSave = 0;
+		favoredEnemy = 1;
 		break;
 	case 2:
 		spellsPerDay[0] = 0;
@@ -51,6 +52,7 @@ void Ranger::onLevelUp()
 		fortSave = 3;
 		reflexSave = 3;
 		willSave = 0;
+		favoredEnemy = 1;
 		break;
 	case 3:
 		spellsPerDay[0] = 0;
@@ -61,6 +63,7 @@ void Ranger::onLevelUp()
 		fortSave = 3;
 		reflexSave = 3;
 		willSave = 1;
+		favoredEnemy = 1;
 		break;
 	case 4:
 		spellsPerDay[0] = 0;
@@ -71,6 +74,7 @@ void Ranger::onLevelUp()
 		fortSave = 4;
 		reflexSave = 4;
 		willSave = 1;
+		favoredEnemy = 1;
 		break;
 	case 5:
 		spellsPerDay[0] = 0;
@@ -81,6 +85,7 @@ void Ranger::onLevelUp()
 		fortSave = 4;
 		reflexSave = 4;
 		willSave = 1;
+		favoredEnemy = 2;
 		break;
 	case 6:
 		spellsPerDay[0] = 1;
@@ -91,6 +96,7 @@ void Ranger::onLevelUp()
 		fortSave = 5;
 		reflexSave = 5;
 		willSave = 2;
+		favoredEnemy = 2;
 		break;
 	case 7:
 		spellsPerDay[0] = 1;
@@ -101,6 +107,7 @@ void Ranger::onLevelUp()
 		fortSave = 5;
 		reflexSave = 5;
 		willSave - 2;
+		favoredEnemy = 2;
 		break;
 	case 8:
 		spellsPerDay[0] = 1;
@@ -111,6 +118,7 @@ void Ranger::onLevelUp()
 		fortSave = 6;
 		reflexSave = 6;
 		willSave = 2;
+		favoredEnemy = 2;
 		break;
 	case 9:
 		spellsPerDay[0] = 2;
@@ -121,6 +129,7 @@ void Ranger::onLevelUp()
 		fortSave = 6;
 		reflexSave = 6;
 		willSave = 3;
+		favoredEnemy = 2;
 		break;
 	case 10:
 		spellsPerDay[0] = 2;
@@ -131,6 +140,7 @@ void Ranger::onLevelUp()
 		fortSave = 7;
 		reflexSave = 7;
 		willSave = 3;
+		favoredEnemy = 3;
 		break;
 	case 11:
 		spellsPerDay[0] = 2;
@@ -141,6 +151,7 @@ void Ranger::onLevelUp()
 		fortSave = 7;
 		reflexSave = 7;
 		willSave = 3;
+		favoredEnemy = 3;
 		break;
 	case 12:
 		spellsPerDay[0] = 2;
@@ -151,6 +162,7 @@ void Ranger::onLevelUp()
 		fortSave = 8;
 		reflexSave = 8;
 		willSave = 4;
+		favoredEnemy = 3;
 		break;
 	case 13:
 		spellsPerDay[0] = 3;
@@ -161,6 +173,7 @@ void Ranger::onLevelUp()
 		fortSave = 8;
 		reflexSave = 8;
 		willSave = 4;
+		favoredEnemy = 3;
 		break;
 	case 14:
 		spellsPerDay[0] = 3;
@@ -171,6 +184,7 @@ void Ranger::onLevelUp()
 		fortSave = 9;
 		reflexSave = 9;
 		willSave = 4;
+		favoredEnemy = 3;
 		break;
 	case 15:
 		spellsPerDay[0] = 3;
@@ -181,6 +195,7 @@ void Ranger::onLevelUp()
 		fortSave = 9;
 		reflexSave = 9;
 		willSave = 5;
+		favoredEnemy = 4;
 		break;
 	case 16:
 		spellsPerDay[0] = 3;
@@ -191,6 +206,8 @@ void Ranger::onLevelUp()
 		fortSave = 10;
 		reflexSave = 10;
 		willSave = 5;
+
+		favoredEnemy = 4;
 		break;
 	case 17:
 		spellsPerDay[0] = 4;
@@ -201,6 +218,8 @@ void Ranger::onLevelUp()
 		fortSave = 10;
 		reflexSave = 10;
 		willSave = 5;
+
+		favoredEnemy = 4;
 		break;
 	case 18:
 		spellsPerDay[0] = 4;
@@ -211,6 +230,8 @@ void Ranger::onLevelUp()
 		fortSave = 11;
 		reflexSave = 11;
 		willSave = 6;
+
+		favoredEnemy = 4;
 		break;
 	case 19:
 		spellsPerDay[0] = 4;
@@ -221,6 +242,8 @@ void Ranger::onLevelUp()
 		fortSave = 11;
 		reflexSave = 11;
 		willSave = 6;
+
+		favoredEnemy = 4;
 		break;
 	case 20:
 		spellsPerDay[0] = 4;
@@ -231,6 +254,7 @@ void Ranger::onLevelUp()
 		fortSave = 12;
 		reflexSave = 12;
 		willSave = 6;
+		favoredEnemy = 5;
 		break;
 	}
 }
@@ -271,4 +295,11 @@ int Ranger::getReflexSave()
 int Ranger::getSpellsPerDay(int spellLevel)
 {
 	return spellsPerDay[spellLevel];
+}
+
+std::string Ranger::getSpecial()
+{
+	std::string returnString = "Rangers have an exceedingly large and varied set of unique abilities to help them contribute to any party. Please consult your Player's Handbook for more information.\nRanger favored enemy types: ";
+	returnString += favoredEnemy;
+	return returnString;
 }

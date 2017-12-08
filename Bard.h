@@ -1,6 +1,7 @@
 #pragma once
 #include "Class.h"
 #include "Spell.h"
+#include <vector>
 class Bard :
 	public Class
 {
@@ -18,5 +19,8 @@ public:
 	int getWillSave();
 	int getReflexSave();
 	int getSpellsPerDay(int spellLevel);
+	void addSpell(Spell newSpell);
+	std::vector<Spell> getSpellsKnown();
+	std::string getSpecial();
 };
 

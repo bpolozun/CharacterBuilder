@@ -36,6 +36,8 @@ void Paladin::onLevelUp()
 		fortSave = 2;
 		reflexSave = 0;
 		willSave = 2;
+		smiteEvil = 1;
+		layOnHands = 0;
 		break;
 	case 2:
 		spellsPerDay[0] = 0;
@@ -46,6 +48,8 @@ void Paladin::onLevelUp()
 		fortSave = 3;
 		reflexSave = 0;
 		willSave = 3;
+		smiteEvil = 1;
+			layOnHands = 1;
 		break;
 	case 3:
 		spellsPerDay[0] = 0;
@@ -56,6 +60,8 @@ void Paladin::onLevelUp()
 		fortSave = 3;
 		reflexSave = 1;
 		willSave = 3;
+		smiteEvil = 1;
+		layOnHands = 1;
 		break;
 	case 4:
 		spellsPerDay[0] = 0;
@@ -66,6 +72,8 @@ void Paladin::onLevelUp()
 		fortSave = 4;
 		reflexSave = 1;
 		willSave = 4;
+		smiteEvil = 2;
+		layOnHands = 2;
 		break;
 	case 5:
 		spellsPerDay[0] = 0;
@@ -76,6 +84,8 @@ void Paladin::onLevelUp()
 		fortSave = 4;
 		reflexSave = 1;
 		willSave = 4;
+		smiteEvil = 2;
+		layOnHands = 2;
 		break;
 	case 6:
 		spellsPerDay[0] = 1;
@@ -86,6 +96,8 @@ void Paladin::onLevelUp()
 		fortSave = 5;
 		reflexSave = 2;
 		willSave = 5;
+		smiteEvil = 2;
+		layOnHands = 3;
 		break;
 	case 7:
 		spellsPerDay[0] = 1;
@@ -96,6 +108,8 @@ void Paladin::onLevelUp()
 		fortSave = 5;
 		reflexSave = 2;
 		willSave - 5;
+		smiteEvil = 3;
+		layOnHands = 3;
 		break;
 	case 8:
 		spellsPerDay[0] = 1;
@@ -106,6 +120,8 @@ void Paladin::onLevelUp()
 		fortSave = 6;
 		reflexSave = 2;
 		willSave = 6;
+		smiteEvil = 3;
+		layOnHands = 4;
 		break;
 	case 9:
 		spellsPerDay[0] = 2;
@@ -116,6 +132,8 @@ void Paladin::onLevelUp()
 		fortSave = 6;
 		reflexSave = 3;
 		willSave = 6;
+		smiteEvil = 3;
+		layOnHands = 4;
 		break;
 	case 10:
 		spellsPerDay[0] = 2;
@@ -126,6 +144,8 @@ void Paladin::onLevelUp()
 		fortSave = 7;
 		reflexSave = 3;
 		willSave = 7;
+		smiteEvil = 4;
+		layOnHands = 5;
 		break;
 	case 11:
 		spellsPerDay[0] = 2;
@@ -136,6 +156,8 @@ void Paladin::onLevelUp()
 		fortSave = 7;
 		reflexSave = 3;
 		willSave = 7;
+		smiteEvil = 4;
+		layOnHands = 5;
 		break;
 	case 12:
 		spellsPerDay[0] = 2;
@@ -146,6 +168,8 @@ void Paladin::onLevelUp()
 		fortSave = 8;
 		reflexSave = 4;
 		willSave = 8;
+		smiteEvil = 4;
+		layOnHands = 6;
 		break;
 	case 13:
 		spellsPerDay[0] = 3;
@@ -156,6 +180,8 @@ void Paladin::onLevelUp()
 		fortSave = 8;
 		reflexSave = 4;
 		willSave = 8;
+		smiteEvil = 5;
+		layOnHands = 6;
 		break;
 	case 14:
 		spellsPerDay[0] = 3;
@@ -166,6 +192,8 @@ void Paladin::onLevelUp()
 		fortSave = 9;
 		reflexSave = 4;
 		willSave = 9;
+		smiteEvil = 5;
+		layOnHands = 7;
 		break;
 	case 15:
 		spellsPerDay[0] = 3;
@@ -176,6 +204,8 @@ void Paladin::onLevelUp()
 		fortSave = 9;
 		reflexSave = 5;
 		willSave = 9;
+		smiteEvil = 5;
+		layOnHands = 7;
 		break;
 	case 16:
 		spellsPerDay[0] = 3;
@@ -186,6 +216,8 @@ void Paladin::onLevelUp()
 		fortSave = 10;
 		reflexSave = 5;
 		willSave = 10;
+		smiteEvil = 6;
+		layOnHands = 8;
 		break;
 	case 17:
 		spellsPerDay[0] = 4;
@@ -196,6 +228,8 @@ void Paladin::onLevelUp()
 		fortSave = 10;
 		reflexSave = 5;
 		willSave = 10;
+		layOnHands = 8;
+		smiteEvil = 6;
 		break;
 	case 18:
 		spellsPerDay[0] = 4;
@@ -206,6 +240,8 @@ void Paladin::onLevelUp()
 		fortSave = 11;
 		reflexSave = 6;
 		willSave = 11;
+		layOnHands = 9;
+		smiteEvil = 6;
 		break;
 	case 19:
 		spellsPerDay[0] = 4;
@@ -216,6 +252,8 @@ void Paladin::onLevelUp()
 		fortSave = 11;
 		reflexSave = 6;
 		willSave = 11;
+		layOnHands = 9;
+		smiteEvil = 6;
 		break;
 	case 20:
 		spellsPerDay[0] = 4;
@@ -226,6 +264,8 @@ void Paladin::onLevelUp()
 		fortSave = 12;
 		reflexSave = 6;
 		willSave = 12;
+		smiteEvil = 6;
+		layOnHands = 10;
 		break;
 	}
 }
@@ -266,4 +306,22 @@ int Paladin::getReflexSave()
 int Paladin::getSpellsPerDay(int spellLevel)
 {
 	return spellsPerDay[spellLevel];
+}
+
+
+std::string Paladin::getSpecial()
+{
+	std::string returnString ="A Paladin, being a bastion of Light and Law, may SMITE EVIL ";
+	returnString += smiteEvil;
+	returnString += " times per day, allowing them to add their charisma bonus to attack rolls, increasing damage dealt by ";
+	returnString += level;
+	returnString += " points, doubling that against evil outsiders, dragons or undead, and adding an additional ";
+	returnString += 2 * level;
+	returnString += " points of damage on their first successful hit per round. All forms of damage resistance are ignored, and the paladin gains their charisma modifier in AC until the next round.";
+	returnString += "\n A Paladin may also lay their hands upon another, healing the living for ";
+	returnString += layOnHands;
+	returnString += "d6 hit points, or dealing that much in damage to undead. They can do this ";
+	returnString += layOnHands;
+	returnString += " times per day.";
+		return returnString;
 }

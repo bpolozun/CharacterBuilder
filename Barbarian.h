@@ -1,9 +1,13 @@
 #pragma once
 #include "Class.h"
+
 class Barbarian :
 	public Class
 {
+private:
+	int rageUses;
 public:
+
 	Barbarian();
 	~Barbarian();
 	void onLevelUp();
@@ -13,5 +17,6 @@ public:
 	int getFortSave();
 	int getWillSave();
 	int getReflexSave();
+	std::string getSpecial();
 };
 

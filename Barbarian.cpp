@@ -180,3 +180,12 @@ int Barbarian::getReflexSave()
 {
 	return reflexSave;
 }
+
+std::string Barbarian::getSpecial()
+{
+	rageUses = level * 2 + 2;
+	std::string returnString = std::string("As a barbarian, you can use your battlerage ");
+	returnString += rageUses;
+	returnString += " times per day.";
+	return returnString;
+}
