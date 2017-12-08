@@ -18,6 +18,7 @@ protected:
 public:
 	Race();
 	virtual ~Race();
+	std::string getName();
 	int getRaceID();
 	int getAttributeMods(int index);
 };

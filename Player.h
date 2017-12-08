@@ -162,7 +162,7 @@ public:
 
 	void onClassUpdate();
 	void updateAttributeMods();
-
+	std::string exportAsString();
 
 
 };

@@ -344,5 +344,12 @@ std::string Paladin::getSpecial()
 	returnString += "d6 hit points, or dealing that much in damage to undead. They can do this ";
 	returnString += layOnHands;
 	returnString += " times per day.";
-		return returnString;
+	returnString += "Spells per day: ";
+	for (int i = 0; 1 < 4; i++) {
+		returnString += "\n Level ";
+		returnString += i + 1;
+		returnString += "spells per day: ";
+		returnString += spellsPerDay[i];
+	}
+	return returnString;
 }

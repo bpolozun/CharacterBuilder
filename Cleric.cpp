@@ -433,5 +433,12 @@ void Cleric::setLevel(int newLevel)
 		std::string returnString= "A cleric can channel energy, healing allies or harming undead for ";
 		returnString += channelEnergy;
 		returnString += "d6 in a 30 foot radius around them.";
+		returnString += "Spells per day: ";
+		for (int i = 0; 1 < 9; i++) {
+			returnString += "\n Level ";
+			returnString += i + 1;
+			returnString += "spells per day: ";
+			returnString += spellsPerDay[i];
+		}
 		return returnString;
 	}

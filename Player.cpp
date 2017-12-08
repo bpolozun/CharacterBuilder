@@ -215,6 +215,30 @@ void Player::setRace(Race race)
 {
 	userRace = race;
 	setAge(ageCategory);
+	int raceCode = race.getRaceID;
+	switch (raceCode) {
+	case 0:
+		height = rand() % 20 + 55;
+		weight = 2.75*height;
+	case 1:
+		height = rand() % 16 + 53;
+		weight = 2.75*height;
+	case 3:
+		height = rand() % 8 + 44;
+		weight = 2.75*height;
+	case 4:
+		height = rand() % 4 + 34;
+		weight = 2.75*height;
+	case 5:
+		height = rand() % 4 + 30;
+		weight = 2.75*height;
+	case 6:
+		height = rand() % 16 + 60;
+		weight = 2.75*height;
+	case 7:
+		height = rand() % 24 + 57;
+		weight = 2.75*height;
+	}
 }
 
 int Player::getRace()
@@ -252,7 +276,14 @@ std::vector<Item> Player::getInventory()
 	return itemArray;
 }
 
-
+void Player::setName(std::string newName)
+{
+	playerName = newName;
+}
+std::string Player::getName()
+{
+	return playerName;
+}
 void Player::setSkillLevel(int skillLocation, int newValue)
 {
 	skillsArray[skillLocation] = newValue;
@@ -310,5 +341,118 @@ void Player::updateAttributeMods()
 		combatManeuverBonus = baseAttackBonus + attributeBonuses[0];
 		combatManeuverDefense = 10 + baseAttackBonus + attributeBonuses[0] + attributeBonuses[1];
 	}
+
+}
+
+std::string Player::exportAsString()
+{
+	std::string returnString = "Name: ";
+	returnString += playerName;
+	returnString += "\n Level: ";
+	returnString += overallLevel;
+	returnString += " (";
+	if (classes[0].getLevel() != 0) {
+		returnString += "| Barbarian ";
+		returnString += classes[0].getLevel();
+	}
+	if (classes[1].getLevel() != 0) {
+		returnString += "| Bard ";
+		returnString += classes[1].getLevel();
+	}
+	if (classes[2].getLevel() != 0) {
+		returnString += " | Cleric ";
+		returnString += classes[2].getLevel();
+	}
+	if (classes[3].getLevel() != 0) {
+		returnString += " | Druid ";
+		returnString += classes[3].getLevel();
+	}
+	if (classes[4].getLevel() != 0) {
+		returnString += " | Fighter ";
+		returnString += classes[2].getLevel();
+	}
+	if (classes[5].getLevel() != 0) {
+		returnString += " | Monk ";
+		returnString += classes[5].getLevel();
+	}
+	if (classes[6].getLevel() != 0) {
+		returnString += " | Paladin ";
+		returnString += classes[6].getLevel();
+	}
+	if (classes[7].getLevel() != 0) {
+		returnString += " | Ranger ";
+		returnString += classes[7].getLevel();
+	}
+	if (classes[8].getLevel() != 0) {
+		returnString += " | Rogue ";
+		returnString += classes[8].getLevel();
+	}
+	if (classes[9].getLevel() != 0) {
+		returnString += " | Sorcerer ";
+		returnString += classes[9].getLevel();
+	}
+	if (classes[10].getLevel() != 0) {
+		returnString += " | Wizard ";
+		returnString += classes[10].getLevel();
+	}
+	returnString += " | )";
+	returnString += "\n Race: ";
+	returnString += userRace.getName();
+	returnString += "\n Age: ";
+	returnString += age;
+	returnString += "\n Height: ";
+	returnString += height;
+	returnString += "\n: Weight";
+	returnString += weight;
+	returnString += "\n Gender: ";
+	if (gender = false)
+		returnString += "Male";
+	else
+		returnString += "Female";
+	returnString += "\n Alignment: ";
+	switch (alignmentLawfulChaotic) {
+	case 0:
+		returnString += "Chaotic ";
+	case 1:
+		if (alignmentGoodEvil = 1)
+			returnString += "True ";
+		else
+			returnString += "Neutral ";
+	case 2:
+		returnString += "Lawful ";
+	}
+	switch (alignmentGoodEvil) {
+	case 0:
+		returnString += "Good";
+	case 1:
+		returnString += "Neutral";
+	case 2:
+		returnString += "Evil";
+	}
+
+	returnString += "\n SkillPoints: ";
+	returnString += totalSkillPoints;
+	returnString += "\n Feats: ";
+	returnString += totalFeats;
+	returnString += "\n COMBAT MODIFIERS: ";
+	returnString += "\n \n BAB: ";
+	returnString += baseAttackBonus;
+	returnString += "\n CMB: ";
+	returnString += combatManeuverBonus;
+	returnString += "\n CMD: ";
+	returnString += combatManeuverDefense;
+	returnString += "\n \n SAVES:";
+	returnString += "\n Fortitude Save: ";
+	returnString += fortitudeSave;
+	returnString += "\n Reflex Save: ";
+	returnString += reflexSave;
+	returnString += "\n Will Save";
+	returnString += willSave;
+	returnString += "Class abilities: ";
+	for (int i = 0; i < 11; i++) {
+		returnString += classes[i].getSpecial();
+		returnString += "\n ";
+	}
+
 
 }

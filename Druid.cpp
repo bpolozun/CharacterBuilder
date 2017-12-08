@@ -439,6 +439,13 @@ std::string Druid::getSpecial()
 	else {
 		returnString += " an unlimited number of ";
 	}
-	returnString += " times per day. A druid also has a number of other useful abilities. Consult your player's handbook for more information.";
+	returnString += " times per day. A druid also has a number of other useful abilities. Consult your player's handbook for more information."; 
+	returnString += "Spells per day: ";
+	for (int i = 0; 1 < 9; i++) {
+		returnString += "\n Level ";
+		returnString += i + 1;
+		returnString += "spells per day: ";
+		returnString += spellsPerDay[i];
+	}
 	return returnString;
 }

@@ -337,5 +337,13 @@ int Bard::getSpellsPerDay(int spellLevel)
 
 std::string Bard::getSpecial()
 {
-	return std::string("A bard can perform a number of useful songs. Please consult your Player's Handbook for more information.");
+	std::string returnString = "A bard can perform a number of useful songs. Please consult your Player's Handbook for more information.";
+	returnString += "Spells per day: ";
+	for (int i = 0; 1 < 6; i++) {
+		returnString += "\n Level ";
+		returnString += i + 1;
+		returnString += "spells per day: ";
+		returnString += spellsPerDay[i];
+	}
+	return returnString;
 }

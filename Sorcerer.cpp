@@ -407,5 +407,13 @@ int Sorcerer::getSpellsPerDay(int spellLevel)
 
 std::string Sorcerer::getSpecial()
 {
-	return std::string("Sorcerers do not have any special abilities, beyond their spellcasting.");
+	std::string returnString = "Wizards do not have any special abilities outside of their spellcasting.";
+	returnString += "Spells per day: ";
+	for (int i = 0; 1 < 9; i++) {
+		returnString += "\n Level ";
+		returnString += i + 1;
+		returnString += "spells per day: ";
+		returnString += spellsPerDay[i];
+	}
+	return returnString;
 }

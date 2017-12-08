@@ -60,6 +60,11 @@ int Class::getLevel()
 	return level;
 }
 
+std::string Class::getSpecial()
+{
+	return std::string();
+}
+
 int Class::getFortSave()
 {
 	return fortSave;

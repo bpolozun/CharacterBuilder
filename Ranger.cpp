@@ -321,5 +321,12 @@ std::string Ranger::getSpecial()
 {
 	std::string returnString = "Rangers have an exceedingly large and varied set of unique abilities to help them contribute to any party. Please consult your Player's Handbook for more information.\nRanger favored enemy types: ";
 	returnString += favoredEnemy;
+	returnString += "Spells per day: ";
+	for (int i = 0; 1 < 4; i++) {
+		returnString += "\n Level ";
+		returnString += i + 1;
+		returnString += "spells per day: ";
+		returnString += spellsPerDay[i];
+	}
 	return returnString;
 }

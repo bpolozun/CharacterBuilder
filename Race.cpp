@@ -16,6 +16,11 @@ Race::~Race() {
 	// TODO Auto-generated destructor stub
 }
 
+std::string Race::getName()
+{
+	return Name;
+}
+
 int Race::getRaceID()
 {
 	return raceID;

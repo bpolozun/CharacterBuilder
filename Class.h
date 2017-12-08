@@ -26,6 +26,7 @@ public:
 	virtual ~Class();
 	virtual void setLevel(int newLevel);
 	virtual int getLevel();
+	virtual std::string getSpecial();
 	int getRestriction();
 	int getSkillClass(int index);
 	int getKnowledgeClass(int index);
