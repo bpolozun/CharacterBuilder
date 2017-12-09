@@ -121,6 +121,7 @@
     <ClCompile Include="Ranger.cpp" />
     <ClCompile Include="Rogue.cpp" />
     <ClCompile Include="Sorcerer.cpp" />
+    <ClCompile Include="MAIN.cpp" />
     <ClCompile Include="Wizard.cpp" />
   </ItemGroup>
   <ItemGroup>
