@@ -551,14 +551,3 @@ std::string Player::exportAsString()
 
 
 }
-
-int main() {
-	Player newplayer;
-	newplayer = Player();
-	newplayer.setClassLevel(1, 5);
-	newplayer.setClassLevel(7, 10);
-
-	std::cout << newplayer.exportAsString();
-
-	return(0);
-}
