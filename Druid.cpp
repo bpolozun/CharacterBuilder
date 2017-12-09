@@ -448,7 +448,7 @@ int Druid::getSpellsPerDay(int spellLevel)
 
 std::string Druid::getSpecial()
 {
-	std::string returnString = " \n \na  druid, as an agent of nature, may take the form of the many creatures of nature, though the range of transformations achieveable may vary depending on their level. You may take these forms ";
+	std::string returnString = " \n \nA  druid, as an agent of nature, may take the form of the many creatures of nature, though the range of transformations achieveable may vary depending on their level. You may take these forms ";
 	if (level < 20) {
 		returnString += std::to_string(wildShape);
 	}
