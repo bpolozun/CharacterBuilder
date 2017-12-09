@@ -5,6 +5,7 @@
 Wizard::Wizard()
 {
 	level = 0;
+	/*
 	skillClassArray[1] = 3;
 	skillClassArray[8] = 3;
 	skillClassArray[17] = 3;
@@ -12,9 +13,22 @@ Wizard::Wizard()
 	for (int i = 0; i < 10; i++) {
 		knowledgeClassArray[i] = 3;
 	}
-
+	*/
 	skillPointperLevel = 2;
-	onLevelUp();
+	spellsPerDay[0] = 3;
+	spellsPerDay[1] = 1;
+	spellsPerDay[2] = 0;
+	spellsPerDay[3] = 0;
+	spellsPerDay[4] = 0;
+	spellsPerDay[5] = 0;
+	spellsPerDay[6] = 0;
+	spellsPerDay[7] = 0;
+	spellsPerDay[8] = 0;
+	spellsPerDay[9] = 0;
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
 }
 
 
@@ -408,13 +422,13 @@ int Wizard::getSpellsPerDay(int spellLevel)
 
 std::string Wizard::getSpecial()
 {
-	std::string returnString = "Wizards do not have any special abilities outside of their spellcasting.";
-	returnString += "Spells per day: ";
-	for (int i = 0; 1 < 9; i++) {
+	std::string returnString = " \n  \n Wizards do not have any special abilities outside of their spellcasting.";
+	returnString += " \n Spells per day: ";
+	for (int i = 0; i < 9; i++) {
 		returnString += "\n Level ";
-		returnString += i + 1;
-		returnString += "spells per day: ";
-		returnString += spellsPerDay[i];
+		returnString += std::to_string(i + 1);
+		returnString += " spells per day: ";
+		returnString += std::to_string(spellsPerDay[i]);
 	}
 	return returnString;
 }

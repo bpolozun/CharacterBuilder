@@ -29,13 +29,13 @@ public:
 
 	@param newLevel Integer, the level the level will be set to.
 	*/
-	void setLevel(int newLevel);
+	void setLevel(int newLevel) override;
 	/*
 	Fetch method for level.
 
 	@return The value of the level.
 	*/
-	int getLevel();
+	int getLevel() override;
 	/*
 	Fetch method for BAB
 
@@ -72,6 +72,6 @@ public:
 
 	@return A string that contains the special abilities or spellcasting abilities of the class.
 	*/
-	std::string getSpecial();
+	std::string getSpecial() override;
 };
 

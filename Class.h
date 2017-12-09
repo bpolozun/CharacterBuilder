@@ -11,8 +11,8 @@ Superclass for the various actual classes.
 class Class {
 protected:
 	int restriction; //Value to inform if a class is restricted in alignment. 0 if unrestricted.
-	int skillClassArray[21]; //Class skill array. Unimplemented
-	int knowledgeClassArray[10]; //Class skill array for knowledge.
+	//int skillClassArray[21]; //Class skill array. Unimplemented
+	//int knowledgeClassArray[10]; //Class skill array for knowledge.
 	int hitDice; //Hit dice value. Unused, potentially implementable if randomized gains rather than fixed values were used.
 	int hitPoints; //Hit points a given class provides to the player.
 	int level; //Level of the class.

@@ -6,6 +6,7 @@ Paladin::Paladin()
 {
 	restriction = 4;
 	level = 0;
+	/*
 	skillClassArray[4] = 3;
 	skillClassArray[9] = 3;
 	skillClassArray[10] = 3;
@@ -14,8 +15,20 @@ Paladin::Paladin()
 	skillClassArray[17] = 3;
 	knowledgeClassArray[7] = 3;
 	knowledgeClassArray[9] = 3;
+	*/
+	spellsPerDay[0] = 3;
+	spellsPerDay[1] = 1;
+	spellsPerDay[2] = 0;
+	spellsPerDay[3] = 0;
+
 	BAB = 1 * level;
 	skillPointperLevel = 2;
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
+	smiteEvil = 0;
+	layOnHands = 0;
 
 }
 
@@ -332,24 +345,24 @@ int Paladin::getSpellsPerDay(int spellLevel)
 
 std::string Paladin::getSpecial()
 {
-	std::string returnString ="A Paladin, being a bastion of Light and Law, may SMITE EVIL ";
-	returnString += smiteEvil;
+	std::string returnString ="\n \n A Paladin, being a bastion of Light and Law, may SMITE EVIL ";
+	returnString += std::to_string(smiteEvil);
 	returnString += " times per day, allowing them to add their charisma bonus to attack rolls, increasing damage dealt by ";
-	returnString += level;
+	returnString += std::to_string(level);
 	returnString += " points, doubling that against evil outsiders, dragons or undead, and adding an additional ";
-	returnString += 2 * level;
+	returnString += std::to_string(2 * level);
 	returnString += " points of damage on their first successful hit per round. All forms of damage resistance are ignored, and the paladin gains their charisma modifier in AC until the next round.";
 	returnString += "\n A Paladin may also lay their hands upon another, healing the living for ";
-	returnString += layOnHands;
+	returnString += std::to_string(layOnHands);
 	returnString += "d6 hit points, or dealing that much in damage to undead. They can do this ";
-	returnString += layOnHands;
+	returnString += std::to_string(layOnHands);
 	returnString += " times per day.";
-	returnString += "Spells per day: ";
-	for (int i = 0; 1 < 4; i++) {
+	returnString += " \n Spells per day: ";
+	for (int i = 0; i < 4; i++) {
 		returnString += "\n Level ";
-		returnString += i + 1;
-		returnString += "spells per day: ";
-		returnString += spellsPerDay[i];
+		returnString += std::to_string(i + 1);
+		returnString += " spells per day: ";
+		returnString += std::to_string(spellsPerDay[i]);
 	}
 	return returnString;
 }

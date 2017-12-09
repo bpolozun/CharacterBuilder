@@ -6,7 +6,8 @@
 Druid::Druid()
 {
 	restriction = 0;
-	level = 1;
+	level = 0;
+	/*
 	skillClassArray[3] = 3;
 	skillClassArray[8] = 3;
 	skillClassArray[9] = 3;
@@ -18,7 +19,22 @@ Druid::Druid()
 	skillClassArray[20] = 3;
 	knowledgeClassArray[3] = 3;
 	knowledgeClassArray[6] = 3;
-	onLevelUp();
+	*/
+	spellsPerDay[0] = 3;
+	spellsPerDay[1] = 1;
+	spellsPerDay[2] = 0;
+	spellsPerDay[3] = 0;
+	spellsPerDay[4] = 0;
+	spellsPerDay[5] = 0;
+	spellsPerDay[6] = 0;
+	spellsPerDay[7] = 0;
+	spellsPerDay[8] = 0;
+	spellsPerDay[9] = 0;
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
+	wildShape = 0;
 }
 
 
@@ -432,20 +448,20 @@ int Druid::getSpellsPerDay(int spellLevel)
 
 std::string Druid::getSpecial()
 {
-	std::string returnString = "A druid, as an agent of nature, may take the form of the many creatures of nature, though the range of transformations achieveable may vary depending on their level. You may take these forms ";
+	std::string returnString = " \n \na  druid, as an agent of nature, may take the form of the many creatures of nature, though the range of transformations achieveable may vary depending on their level. You may take these forms ";
 	if (level < 20) {
-		returnString += wildShape;
+		returnString += std::to_string(wildShape);
 	}
 	else {
 		returnString += " an unlimited number of ";
 	}
 	returnString += " times per day. A druid also has a number of other useful abilities. Consult your player's handbook for more information."; 
-	returnString += "Spells per day: ";
-	for (int i = 0; 1 < 9; i++) {
+	returnString += " \n Spells per day: ";
+	for (int i = 0; i < 9; i++) {
 		returnString += "\n Level ";
-		returnString += i + 1;
-		returnString += "spells per day: ";
-		returnString += spellsPerDay[i];
+		returnString += std::to_string(i + 1);
+		returnString += " spells per day: ";
+		returnString += std::to_string(spellsPerDay[i]);
 	}
 	return returnString;
 }

@@ -5,6 +5,7 @@
 Ranger::Ranger()
 {
 	level = 0;
+	/*
 	skillClassArray[3] = 3;
 	skillClassArray[9] = 3;
 	skillClassArray[10] = 3;
@@ -18,9 +19,18 @@ Ranger::Ranger()
 	knowledgeClassArray[1] = 3;
 	knowledgeClassArray[3] = 3;
 	knowledgeClassArray[6] = 3;
-	
+	*/
+	spellsPerDay[0] = 3;
+	spellsPerDay[1] = 1;
+	spellsPerDay[2] = 0;
+	spellsPerDay[3] = 0;
+
 	BAB = 1 * level;
 	skillPointperLevel = 6;
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
 }
 
 
@@ -319,14 +329,14 @@ int Ranger::getSpellsPerDay(int spellLevel)
 
 std::string Ranger::getSpecial()
 {
-	std::string returnString = "Rangers have an exceedingly large and varied set of unique abilities to help them contribute to any party. Please consult your Player's Handbook for more information.\nRanger favored enemy types: ";
-	returnString += favoredEnemy;
-	returnString += "Spells per day: ";
-	for (int i = 0; 1 < 4; i++) {
+	std::string returnString = " \n  \nRangers have an exceedingly large and varied set of unique abilities to help them contribute to any party. Please consult your Player's Handbook for more information.\nRanger favored enemy types: ";
+	returnString += std::to_string(favoredEnemy);
+	returnString += "\nSpells per day: ";
+	for (int i = 0; i < 4; i++) {
 		returnString += "\n Level ";
-		returnString += i + 1;
-		returnString += "spells per day: ";
-		returnString += spellsPerDay[i];
+		returnString += std::to_string(i + 1);
+		returnString += " spells per day: ";
+		returnString += std::to_string(spellsPerDay[i]);
 	}
 	return returnString;
 }

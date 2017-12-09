@@ -6,6 +6,7 @@ Monk::Monk()
 {
 	restriction = 3;
 	level = 0;
+	/*
 	skillClassArray[0] = 3;
 	skillClassArray[3] = 3;
 	skillClassArray[7] = 3;
@@ -18,8 +19,13 @@ Monk::Monk()
 	skillClassArray[20] = 3;
 	knowledgeClassArray[4] = 3;
 	knowledgeClassArray[9] = 3;
+	*/
 	BAB = 1 * level;
 	skillPointperLevel = 4;
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
 }
 
 
@@ -228,8 +234,8 @@ int Monk::getReflexSave()
 
 std::string Monk::getSpecial()
 {
-	std::string returnString = "A monk can use their ki pool for a variety of different feats. You have ";
-	returnString += kiPool;
+	std::string returnString = " \n \n A monk can use their ki pool for a variety of different feats. You have ";
+	returnString += std::to_string(kiPool);
 	returnString += " points in your pool. Consult your player's handbook for more information.";
 	return returnString;
 }

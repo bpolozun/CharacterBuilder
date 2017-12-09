@@ -28,13 +28,13 @@ public:
 
 	@param newLevel Integer, the level the level will be set to.
 	*/
-	void setLevel(int newLevel);
+	void setLevel(int newLevel) override;
 	/*
 	Fetch method for level.
 
 	@return The value of the level.
 	*/
-	int getLevel();
+	int getLevel() override;
 	/*
 	Feth method for BAB
 	
@@ -46,7 +46,7 @@ public:
 
 	@return The value provided by the class to the player's overall fort save.
 	*/
-	int getFortSave();
+	int getFortSave() ;
 	/*
 	Fetch method for willSave
 
@@ -64,6 +64,6 @@ public:
 
 	@return A string that contains the special abilities or spells of the class.
 	*/
-	std::string getSpecial();
+	std::string getSpecial() override;
 };
 

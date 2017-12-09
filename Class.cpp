@@ -12,6 +12,7 @@ Class::Class() {
 	BAB = 0;
 	skillPointperLevel = 0;
 	hitPoints = 0;
+	hitDice = 0;
 
 }
 
@@ -24,11 +25,12 @@ void Class::setLevel(int newLevel)
 }
 
 
+
 int Class::getRestriction()
 {
 	return restriction;
 }
-
+/*
 int  Class::getSkillClass(int index)
 {
 	return skillClassArray[index];
@@ -38,7 +40,7 @@ int Class::getKnowledgeClass(int index)
 {
 	return knowledgeClassArray[index];
 }
-
+*/
 int Class::getBAB()
 {
 	return BAB;

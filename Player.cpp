@@ -10,19 +10,18 @@ Player::Player() {
 	for (int i = 0; i < 6; i++) {
 		attributeArray[i] = 10;
 	}
-	userRace = Human();
-	classes[0] = Barbarian();
-	classes[1] = Bard();
-	classes[2] = Cleric();
-	classes[3] = Druid();
-	classes[4] = Fighter();
-	classes[5] = Monk();
-	classes[6] = Paladin();
-	classes[7] = Ranger();
-	classes[8] = Rogue();
-	classes[9] = Sorcerer();
-	classes[10] = Wizard();
-
+	setRace(7);
+	classes[0] = new Barbarian();
+	classes[1] = new Bard();
+	classes[2] = new Cleric();
+	classes[3] = new Druid();
+	classes[4] = new Fighter();
+	classes[5] = new  Monk();
+	classes[6] = new Paladin();
+	classes[7] = new Ranger();
+	classes[8] = new  Rogue();
+	classes[9] = new Sorcerer();
+	classes[10] = new Wizard();
 	hitPoints = 0;
 	ageCategory = 0;
 	alignmentGoodEvil = 1;
@@ -81,79 +80,114 @@ void Player::setAge(int newAge)
 		switch (newAge) {
 		case 0:
 			age = rand() % 15 + 20;
+			break;
 		case 1:
 			age = rand() % 18 + 35;
+			break;
 		case 2:
 			age = rand() % 17 + 53;
+			break;
 		case 3:
 			age = rand() % 25 + 70;
+
 		}
+		break;
 	case 1:
 		switch (newAge) {
 		case 0:
 			age = rand() % 65 + 110;
+			break;
 		case 1:
 			age = rand() % 88 + 175;
+			break;
 		case 2:
 			age = rand() % 87 + 263;
+			break;
 		case 3:
 			age = rand() % 400 + 350;
+			break;
 		}
+		break;
 	case 3:
 		switch (newAge) {
 		case 0:
 			age = rand() % 85 + 40;
+			break;
 		case 1:
 			age = rand() % 63 + 125;
+			break;
 		case 2:
 			age = rand() % 82 + 188;
+			break;
 		case 3:
 			age = rand() % 200 + 250;
+			break;
 		}
+		break;
 	case 4:
 		switch (newAge) {
 		case 0:
 			age = rand() % 60 + 40;
+			break;
 		case 1:
 			age = rand() % 50 + 100;
+			break;
 		case 2:
 			age = rand() % 50 + 150;
+			break;
 		case 3:
 			age = rand() % 300 + 200;
+			break;
 		}
+		break;
 	case 5:
 		switch (newAge) {
 		case 0:
 			age = rand() % 30 + 20;
+			break;
 		case 1:
 			age = rand() % 25 + 50;
+			break;
 		case 2:
 			age = rand() % 25 + 75;
+			break;
 		case 3:
 			age = rand() % 100 + 100;
+			break;
 		}
+		break;
 	case 6:
 		switch (newAge) {
 		case 0:
 			age = rand() % 42 + 20;
+			break;
 		case 1:
 			age = rand() % 31 + 62;
+			break;
 		case 2:
 			age = rand() % 32 + 93;
+			break;
 		case 3:
 			age = rand() % 60 + 125;
+			break;
 		}
+		break;
 	case 7:
 		switch (newAge) {
 		case 0:
 			age = rand() % 16 + 14;
+			break;
 		case 1:
 			age = rand() % 15 + 30;
+			break;
 		case 2:
 			age = rand() % 15 + 45;
+			break;
 		case 3:
 			age = rand() % 20 + 60;
+			break;
 		}
+		break;
 	}
 
 	switch (newAge) {
@@ -164,6 +198,7 @@ void Player::setAge(int newAge)
 		ageAttributeMods[3] = 0;
 		ageAttributeMods[4] = 0;
 		ageAttributeMods[5] = 0;
+		break;
 	case 1:
 		ageAttributeMods[0] = -1;
 		ageAttributeMods[1] = -1;
@@ -171,6 +206,7 @@ void Player::setAge(int newAge)
 		ageAttributeMods[3] = 1;
 		ageAttributeMods[4] = 1;
 		ageAttributeMods[5] = 1;
+		break;
 	case 2:
 		ageAttributeMods[0] = -2;
 		ageAttributeMods[1] = -2;
@@ -178,6 +214,7 @@ void Player::setAge(int newAge)
 		ageAttributeMods[3] = 2;
 		ageAttributeMods[4] = 2;
 		ageAttributeMods[5] = 2;
+		break;
 	case 3:
 		ageAttributeMods[0] = -3;
 		ageAttributeMods[1] = -3;
@@ -185,6 +222,7 @@ void Player::setAge(int newAge)
 		ageAttributeMods[3] = 3;
 		ageAttributeMods[4] = 3;
 		ageAttributeMods[5] = 3;
+		break;
 	}
 	updateAttributeMods();
 
@@ -200,7 +238,8 @@ int Player::getHeight()
 }
 void Player::setClassLevel(int classLocation, int newLevel)
 {
-	classes[classLocation].setLevel(newLevel);
+	classes[classLocation]->setLevel(newLevel);
+	onClassUpdate();
 }
 int Player::getTotalFeats()
 {
@@ -211,33 +250,62 @@ bool Player::getGender()
 	return gender;
 }
 
-void Player::setRace(Race race)
+void Player::setRace(int race)
 {
-	userRace = race;
+	switch (race) {
+	case 1:
+		userRace = Dwarf();
+		break;
+	case 2:
+		userRace = Gnome();
+		break;
+	case 3:
+		userRace = Elf();
+		break;
+	case 4:
+		userRace = HalfElf();
+		break;
+	case 5:
+		userRace = HalfOrc();
+		break;
+	case 6:
+		userRace = Halfling();
+		break;
+	case 7:
+		userRace = Human();
+		break;
+	}
 	setAge(ageCategory);
-	int raceCode = race.getRaceID();
+	int raceCode = userRace.getRaceID();
 	switch (raceCode) {
 	case 0:
 		height = rand() % 20 + 55;
 		weight = 2.75*height;
+		break;
 	case 1:
 		height = rand() % 16 + 53;
 		weight = 2.75*height;
+		break;
 	case 3:
 		height = rand() % 8 + 44;
 		weight = 2.75*height;
+		break;
 	case 4:
 		height = rand() % 4 + 34;
 		weight = 2.75*height;
+		break;
 	case 5:
 		height = rand() % 4 + 30;
 		weight = 2.75*height;
+		break;
 	case 6:
 		height = rand() % 16 + 60;
 		weight = 2.75*height;
+		break;
 	case 7:
 		height = rand() % 24 + 57;
 		weight = 2.75*height;
+		break;
 	}
 }
 
@@ -304,27 +372,17 @@ void Player::onClassUpdate()
 	willSave = 0;
 	fortitudeSave = 0;
 	reflexSave = 0;
-	for (int i = 0; i < 21; i++) {
-		skillModArray[i] = 0;
-	}
-	for (int i = 0; i < 10; i++) {
-		knowledgeModArray[i] = 0;
-	}
-	for (int i = 0; i < 7; i++) {
-		baseAttackBonus += classes[i].getBAB();
-		hitPoints += classes[i].getHitPoints();
-		for (int j = 0; j < 21; j++) {
-			skillModArray[j] += classes[i].getSkillClass(j);
+	for (int i = 0; i < 11; i++) {
+		if (classes[i]->getLevel() != 0) {
+			baseAttackBonus += classes[i]->getBAB();
+			hitPoints += classes[i]->getHitPoints();
+			totalSkillPoints += classes[i]->getSkillPointPerLevel() * classes[i]->getLevel();
+			totalFeats += classes[i]->getLevel() / 2;
+			willSave += classes[i]->getWillSave();
+			fortitudeSave += classes[i]->getFortSave();
+			reflexSave += classes[i]->getRefSave();
+			overallLevel += classes[i]->getLevel();
 		}
-		for (int j = 0; j < 21; j++) {
-			knowledgeModArray[j] += classes[i].getKnowledgeClass(j);
-		}
-		totalSkillPoints += classes[i].getSkillPointPerLevel() * classes[i].getLevel();
-		totalFeats += classes[i].getLevel() / 2;
-		willSave += classes[i].getWillSave();
-		fortitudeSave += classes[i].getFortSave();
-		reflexSave += classes[i].getRefSave();
-		overallLevel += classes[i].getLevel();
 	}
 	combatManeuverBonus = baseAttackBonus + attributeBonuses[0];
 	combatManeuverDefense = 10 + baseAttackBonus + attributeBonuses[0] + attributeBonuses[1];
@@ -349,61 +407,61 @@ std::string Player::exportAsString()
 	std::string returnString = "Name: ";
 	returnString += playerName;
 	returnString += "\n Level: ";
-	returnString += overallLevel;
+	returnString += std::to_string(overallLevel);
 	returnString += " (";
-	if (classes[0].getLevel() != 0) {
+	if (classes[0]->getLevel() != 0) {
 		returnString += "| Barbarian ";
-		returnString += classes[0].getLevel();
+		returnString += std::to_string(classes[0]->getLevel());
 	}
-	if (classes[1].getLevel() != 0) {
+	if (classes[1]->getLevel() != 0) {
 		returnString += "| Bard ";
-		returnString += classes[1].getLevel();
+		returnString += std::to_string(classes[1]->getLevel());
 	}
-	if (classes[2].getLevel() != 0) {
+	if (classes[2]->getLevel() != 0) {
 		returnString += " | Cleric ";
-		returnString += classes[2].getLevel();
+		returnString += std::to_string(classes[2]->getLevel());
 	}
-	if (classes[3].getLevel() != 0) {
+	if (classes[3]->getLevel() != 0) {
 		returnString += " | Druid ";
-		returnString += classes[3].getLevel();
+		returnString += std::to_string(classes[3]->getLevel());
 	}
-	if (classes[4].getLevel() != 0) {
+	if (classes[4]->getLevel() != 0) {
 		returnString += " | Fighter ";
-		returnString += classes[2].getLevel();
+		returnString += std::to_string(classes[2]->getLevel());
 	}
-	if (classes[5].getLevel() != 0) {
+	if (classes[5]->getLevel() != 0) {
 		returnString += " | Monk ";
-		returnString += classes[5].getLevel();
+		returnString += std::to_string(classes[5]->getLevel());
 	}
-	if (classes[6].getLevel() != 0) {
+	if (classes[6]->getLevel() != 0) {
 		returnString += " | Paladin ";
-		returnString += classes[6].getLevel();
+		returnString += std::to_string(classes[6]->getLevel());
 	}
-	if (classes[7].getLevel() != 0) {
+	if (classes[7]->getLevel() != 0) {
 		returnString += " | Ranger ";
-		returnString += classes[7].getLevel();
+		returnString += std::to_string(classes[7]->getLevel());
 	}
-	if (classes[8].getLevel() != 0) {
+	if (classes[8]->getLevel() != 0) {
 		returnString += " | Rogue ";
-		returnString += classes[8].getLevel();
+		returnString += std::to_string(classes[8]->getLevel());
 	}
-	if (classes[9].getLevel() != 0) {
+	if (classes[9]->getLevel() != 0) {
 		returnString += " | Sorcerer ";
-		returnString += classes[9].getLevel();
+		returnString += std::to_string(classes[9]->getLevel());
 	}
-	if (classes[10].getLevel() != 0) {
+	if (classes[10]->getLevel() != 0) {
 		returnString += " | Wizard ";
-		returnString += classes[10].getLevel();
+		returnString += std::to_string(classes[10]->getLevel());
 	}
 	returnString += " | )";
 	returnString += "\n Race: ";
 	returnString += userRace.getName();
 	returnString += "\n Age: ";
-	returnString += age;
+	returnString += std::to_string(age);
 	returnString += "\n Height: ";
-	returnString += height;
-	returnString += "\n: Weight";
-	returnString += weight;
+	returnString += std::to_string(height);
+	returnString += "\n Weight: ";
+	returnString += std::to_string(weight);
 	returnString += "\n Gender: ";
 	if (gender == false)
 		returnString += "Male";
@@ -413,73 +471,94 @@ std::string Player::exportAsString()
 	switch (alignmentLawfulChaotic) {
 	case 0:
 		returnString += "Chaotic ";
+		break;
 	case 1:
 		if (alignmentGoodEvil == 1)
 			returnString += "True ";
 		else
 			returnString += "Neutral ";
+		break;
 	case 2:
 		returnString += "Lawful ";
+		break;
 	}
 	switch (alignmentGoodEvil) {
 	case 0:
 		returnString += "Good";
+		break;
 	case 1:
 		returnString += "Neutral";
+		break;
 	case 2:
 		returnString += "Evil";
+		break;
 	}
 
 	returnString += "\n SkillPoints: ";
-	returnString += totalSkillPoints;
+	returnString += std::to_string(totalSkillPoints);
 	returnString += "\n Feats: ";
-	returnString += totalFeats;
-	returnString += "\n \n ATRIBUTES:";
+	returnString += std::to_string(totalFeats);
+	returnString += "\n \n ATTRIBUTES:";
 	returnString += "\n Strength: ";
-	returnString += attributeArray[0] + attributeModArray[0];
+	returnString += std::to_string(attributeArray[0] + attributeModArray[0]);
 	returnString += " | ";
-	returnString += attributeBonuses[0];
+	returnString += std::to_string(attributeBonuses[0]);
 	returnString += "\n Dexterity: ";
-	returnString += attributeArray[1] + attributeModArray[1];
+	returnString += std::to_string(attributeArray[1] + attributeModArray[1]);
 	returnString += " | ";
-	returnString += attributeBonuses[1];
+	returnString += std::to_string(attributeBonuses[1]);
 	returnString += "\n Constitution: ";
-	returnString += attributeArray[2] + attributeModArray[2];
+	returnString += std::to_string(attributeArray[2] + attributeModArray[2]);
 	returnString += " | ";
-	returnString += attributeBonuses[2];
+	returnString += std::to_string(attributeBonuses[2]);
 	returnString += "\n Intelligence: ";
-	returnString += attributeArray[3] + attributeModArray[3];
+	returnString += std::to_string(attributeArray[3] + attributeModArray[3]);
 	returnString += " | ";
-	returnString += attributeBonuses[3];
+	returnString += std::to_string(attributeBonuses[3]);
 	returnString += "\n Wisdom: ";
-	returnString += attributeArray[4] + attributeModArray[4];
+	returnString += std::to_string(attributeArray[4] + attributeModArray[4]);
 	returnString += " | ";
-	returnString += attributeBonuses[4];
+	returnString += std::to_string(attributeBonuses[4]);
 	returnString += "\n Charisma: ";
-	returnString += attributeArray[5] + attributeModArray[5];
+	returnString += std::to_string(attributeArray[5] + attributeModArray[5]);
 	returnString += " | ";
-	returnString += attributeBonuses[5];
+	returnString += std::to_string(attributeBonuses[5]);
+	returnString += "\n Hit Points: ";
+	returnString += std::to_string(hitPoints);
 	returnString += "\n \n COMBAT MODIFIERS: ";
 	returnString += "\n \n BAB: ";
-	returnString += baseAttackBonus;
+	returnString += std::to_string(baseAttackBonus);
 	returnString += "\n CMB: ";
-	returnString += combatManeuverBonus;
+	returnString += std::to_string(combatManeuverBonus);
 	returnString += "\n CMD: ";
-	returnString += combatManeuverDefense;
+	returnString += std::to_string(combatManeuverDefense);
 	returnString += "\n \n SAVES:";
 	returnString += "\n Fortitude Save: ";
-	returnString += fortitudeSave;
+	returnString += std::to_string(fortitudeSave);
 	returnString += "\n Reflex Save: ";
-	returnString += reflexSave;
-	returnString += "\n Will Save";
-	returnString += willSave;
-	returnString += "Class abilities: ";
+	returnString += std::to_string(reflexSave);
+	returnString += "\n Will Save: ";
+	returnString += std::to_string(willSave);
+	returnString += "\n \n Class abilities: ";
 	for (int i = 0; i < 11; i++) {
-		returnString += classes[i].getSpecial();
-		returnString += "\n ";
+		if (classes[i]->getLevel() != 0) {
+			returnString += classes[i]->getSpecial();
+			returnString += "\n ";
+		}
 	}
 
 	return returnString;
 
 
+}
+
+int main() {
+	Player newplayer;
+	newplayer = Player();
+	newplayer.setClassLevel(1, 5);
+	newplayer.setClassLevel(7, 10);
+
+	std::cout << newplayer.exportAsString();
+
+	return(0);
 }

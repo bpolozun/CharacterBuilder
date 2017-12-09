@@ -5,6 +5,7 @@
 Fighter::Fighter()
 {
 	level = 0;
+	/*
 	skillClassArray[3] = 3;
 	skillClassArray[9] = 3;
 	skillClassArray[11] = 3;
@@ -13,9 +14,13 @@ Fighter::Fighter()
 	skillClassArray[20] = 3;
 	knowledgeClassArray[1] = 3;
 	knowledgeClassArray[2] = 3;
+	*/
 	BAB = 1 * level;
 	skillPointperLevel = 2;
-	onLevelUp();
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
 }
 
 
@@ -204,5 +209,5 @@ int Fighter::getReflexSave()
 
 std::string Fighter::getSpecial()
 {
-	return std::string("A fighter does not have any special bilities, relying on their bravery and strength of arms to see them to victory.");
+	return std::string(" \n \n A fighter does not have any special bilities, relying on their bravery and strength of arms to see them to victory.");
 }

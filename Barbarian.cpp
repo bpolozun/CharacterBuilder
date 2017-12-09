@@ -5,7 +5,8 @@
 Barbarian::Barbarian()
 {
 	restriction = 0;
-	level = 1;
+	level = 0;
+	/*
 	skillClassArray[0] = 3;
 	skillClassArray[3] = 3;
 	skillClassArray[9] = 3;
@@ -15,8 +16,13 @@ Barbarian::Barbarian()
 	skillClassArray[19] = 3;
 	skillClassArray[20] = 3;
 	knowledgeClassArray[6] = 3;
+	*/
 	BAB = 1 * level;
 	skillPointperLevel = 4;
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
 }
 
 

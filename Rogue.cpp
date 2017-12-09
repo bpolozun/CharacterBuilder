@@ -5,6 +5,7 @@
 Rogue::Rogue()
 {
 	level = 0;
+	/*
 	skillClassArray[0] = 3;
 	skillClassArray[1] = 3;
 	skillClassArray[2] = 3;
@@ -23,8 +24,13 @@ Rogue::Rogue()
 	skillClassArray[21] = 3;
 	knowledgeClassArray[1] = 3;
 	knowledgeClassArray[6] = 3;
+	*/
 	BAB = 1 * level;
 	skillPointperLevel = 8;
+	hitPoints = 0;
+	willSave = 0;
+	reflexSave = 0;
+	fortSave = 0;
 }
 
 
@@ -235,8 +241,8 @@ int Rogue::getReflexSave()
 
 std::string Rogue::getSpecial()
 {
-	std::string returnString = "A rogue can sneak attack on an unaware or flanked target, dealing an additional ";
-	returnString += sneakAttack;
+	std::string returnString = " \n \n A rogue can sneak attack on an unaware or flanked target, dealing an additional ";
+	returnString += std::to_string(sneakAttack);
 	returnString += "d6 damage per strike.";
 	return returnString;
 }
