@@ -215,7 +215,7 @@ void Player::setRace(Race race)
 {
 	userRace = race;
 	setAge(ageCategory);
-	int raceCode = race.getRaceID;
+	int raceCode = race.getRaceID();
 	switch (raceCode) {
 	case 0:
 		height = rand() % 20 + 55;
@@ -405,7 +405,7 @@ std::string Player::exportAsString()
 	returnString += "\n: Weight";
 	returnString += weight;
 	returnString += "\n Gender: ";
-	if (gender = false)
+	if (gender == false)
 		returnString += "Male";
 	else
 		returnString += "Female";
@@ -414,7 +414,7 @@ std::string Player::exportAsString()
 	case 0:
 		returnString += "Chaotic ";
 	case 1:
-		if (alignmentGoodEvil = 1)
+		if (alignmentGoodEvil == 1)
 			returnString += "True ";
 		else
 			returnString += "Neutral ";
@@ -434,7 +434,32 @@ std::string Player::exportAsString()
 	returnString += totalSkillPoints;
 	returnString += "\n Feats: ";
 	returnString += totalFeats;
-	returnString += "\n COMBAT MODIFIERS: ";
+	returnString += "\n \n ATRIBUTES:";
+	returnString += "\n Strength: ";
+	returnString += attributeArray[0] + attributeModArray[0];
+	returnString += " | ";
+	returnString += attributeBonuses[0];
+	returnString += "\n Dexterity: ";
+	returnString += attributeArray[1] + attributeModArray[1];
+	returnString += " | ";
+	returnString += attributeBonuses[1];
+	returnString += "\n Constitution: ";
+	returnString += attributeArray[2] + attributeModArray[2];
+	returnString += " | ";
+	returnString += attributeBonuses[2];
+	returnString += "\n Intelligence: ";
+	returnString += attributeArray[3] + attributeModArray[3];
+	returnString += " | ";
+	returnString += attributeBonuses[3];
+	returnString += "\n Wisdom: ";
+	returnString += attributeArray[4] + attributeModArray[4];
+	returnString += " | ";
+	returnString += attributeBonuses[4];
+	returnString += "\n Charisma: ";
+	returnString += attributeArray[5] + attributeModArray[5];
+	returnString += " | ";
+	returnString += attributeBonuses[5];
+	returnString += "\n \n COMBAT MODIFIERS: ";
 	returnString += "\n \n BAB: ";
 	returnString += baseAttackBonus;
 	returnString += "\n CMB: ";
@@ -453,6 +478,8 @@ std::string Player::exportAsString()
 		returnString += classes[i].getSpecial();
 		returnString += "\n ";
 	}
+
+	return returnString;
 
 
 }

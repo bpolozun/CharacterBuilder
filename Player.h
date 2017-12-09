@@ -13,7 +13,7 @@
 #include "Item.h"
 #include "Race.h"
 #include "Feat.h"
-#include "Human.H"
+#include "Human.h"
 #include "HalfElf.h"
 #include "Dwarf.h"
 #include "Halfling.h"
