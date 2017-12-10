@@ -88,25 +88,25 @@ Fl_Input *singleName = (Fl_Input *)0;
 // Age
 Fl_Group *sectionAge = (Fl_Group *)0;
 Fl_Box *decorationAge = (Fl_Box *)0;
-Fl_Round_Button *radioYoung = (Fl_Round_Button *)0;
-Fl_Round_Button *radioMiddleAge = (Fl_Round_Button *)0;
-Fl_Round_Button *radioOld = (Fl_Round_Button *)0;
-Fl_Round_Button *radioVenerable = (Fl_Round_Button *)0;
+Fl_Round_Button *roundYoung = (Fl_Round_Button *)0;
+Fl_Round_Button *roundMiddleAge = (Fl_Round_Button *)0;
+Fl_Round_Button *roundOld = (Fl_Round_Button *)0;
+Fl_Round_Button *roundVenerable = (Fl_Round_Button *)0;
 // Race
 Fl_Group *sectionRace = (Fl_Group *)0;
 Fl_Box *decorationRace = (Fl_Box *)0;
-Fl_Round_Button *radioDwarf = (Fl_Round_Button *)0;
-Fl_Round_Button *radioGnome = (Fl_Round_Button *)0;
-Fl_Round_Button *radioElf = (Fl_Round_Button *)0;
-Fl_Round_Button *radioHalfElf = (Fl_Round_Button *)0;
-Fl_Round_Button *radioHalfOrc = (Fl_Round_Button *)0;
-Fl_Round_Button *radioHalfling = (Fl_Round_Button *)0;
-Fl_Round_Button *radioHuman = (Fl_Round_Button *)0;
+Fl_Round_Button *roundDwarf = (Fl_Round_Button *)0;
+Fl_Round_Button *roundGnome = (Fl_Round_Button *)0;
+Fl_Round_Button *roundElf = (Fl_Round_Button *)0;
+Fl_Round_Button *roundHalfElf = (Fl_Round_Button *)0;
+Fl_Round_Button *roundHalfOrc = (Fl_Round_Button *)0;
+Fl_Round_Button *roundHalfling = (Fl_Round_Button *)0;
+Fl_Round_Button *roundHuman = (Fl_Round_Button *)0;
 // Gender
 Fl_Group *sectionGender = (Fl_Group *)0;
 Fl_Box *decorationGender = (Fl_Box *)0;
-Fl_Round_Button *radioMale = (Fl_Round_Button *)0;
-Fl_Round_Button *radioFemale = (Fl_Round_Button *)0;
+Fl_Round_Button *roundMale = (Fl_Round_Button *)0;
+Fl_Round_Button *roundFemale = (Fl_Round_Button *)0;
 // Alignment
 Fl_Group *sectionAlignment = (Fl_Group *)0;
 Fl_Box *decorationAlignment = (Fl_Box *)0;
@@ -194,21 +194,21 @@ Player character = Player();
 // Name
 void singleName_CALLBACK(Fl_Input*);
 // Age
-void radioYoung_CALLBACK();
-void radioMiddleAge_CALLBACK();
-void radioOld_CALLBACK();
-void radioVenerable_CALLBACK();
+void roundYoung_CALLBACK();
+void roundMiddleAge_CALLBACK();
+void roundOld_CALLBACK();
+void roundVenerable_CALLBACK();
 // Race
-void radioDwarf_CALLBACK();
-void radioGnome_CALLBACK();
-void radioElf_CALLBACK();
-void radioHalfElf_CALLBACK();
-void radioHalfOrc_CALLBACK();
-void radioHalfling_CALLBACK();
-void radioHuman_CALLBACK();
+void roundDwarf_CALLBACK();
+void roundGnome_CALLBACK();
+void roundElf_CALLBACK();
+void roundHalfElf_CALLBACK();
+void roundHalfOrc_CALLBACK();
+void roundHalfling_CALLBACK();
+void roundHuman_CALLBACK();
 // Gender
-void radioMale_CALLBACK();
-void radioFemale_CALLBACK();
+void roundMale_CALLBACK();
+void roundFemale_CALLBACK();
 // Alignment
 void optionLawfulGood_CALLBACK();
 void optionNeutralGood_CALLBACK();
@@ -321,45 +321,45 @@ int main()
 	sectionAge->labelsize(16);
 	sectionAge->labelcolor(FL_BACKGROUND2_COLOR);
 	sectionAge->when(FL_WHEN_NEVER);
-	sectionAge->tooltip("Select an age group by clicking on an age group name or radio button.\n(click or move out of the section to close)");
+	sectionAge->tooltip("Select an age group by clicking on an age group name or round button.\n(click or move out of the section to close)");
 	// decorationAge
 	decorationAge = new Fl_Box(105, 155, 430, 60);
 	decorationAge->box(FL_BORDER_BOX);
 	decorationAge->color((Fl_Color)10);
 	decorationAge->labeltype(FL_NO_LABEL);
 	decorationAge->when(FL_WHEN_NEVER);
-	// radioYoung
-	radioYoung = new Fl_Round_Button(115, 170, 95, 30, "Young");
-	radioYoung->type(102);
-	radioYoung->down_box(FL_ROUND_UP_BOX);
-	radioYoung->selection_color(FL_SELECTION_COLOR);
-	radioYoung->labelfont(4);
-	radioYoung->labelsize(12);
-	radioYoung->callback((Fl_Callback*)radioYoung_CALLBACK);
-	// radioMiddleAge
-	radioMiddleAge = new Fl_Round_Button(220, 170, 95, 30, "Middle Age");
-	radioMiddleAge->type(102);
-	radioMiddleAge->down_box(FL_ROUND_UP_BOX);
-	radioMiddleAge->selection_color(FL_SELECTION_COLOR);
-	radioMiddleAge->labelfont(4);
-	radioMiddleAge->labelsize(12);
-	radioMiddleAge->callback((Fl_Callback*)radioMiddleAge_CALLBACK);
-	// radioOld
-	radioOld = new Fl_Round_Button(325, 170, 95, 30, "Old");
-	radioOld->type(102);
-	radioOld->down_box(FL_ROUND_UP_BOX);
-	radioOld->selection_color(FL_SELECTION_COLOR);
-	radioOld->labelfont(4);
-	radioOld->labelsize(12);
-	radioOld->callback((Fl_Callback*)radioOld_CALLBACK);
-	// radioVenerable
-	radioVenerable = new Fl_Round_Button(430, 170, 95, 30, "Venerable");
-	radioVenerable->type(102);
-	radioVenerable->down_box(FL_ROUND_UP_BOX);
-	radioVenerable->selection_color(FL_SELECTION_COLOR);
-	radioVenerable->labelfont(4);
-	radioVenerable->labelsize(12);
-	radioVenerable->callback((Fl_Callback*)radioVenerable_CALLBACK);
+	// roundYoung
+	roundYoung = new Fl_Round_Button(115, 170, 95, 30, "Young");
+	roundYoung->type(102);
+	roundYoung->down_box(FL_ROUND_UP_BOX);
+	roundYoung->selection_color(FL_SELECTION_COLOR);
+	roundYoung->labelfont(4);
+	roundYoung->labelsize(12);
+	roundYoung->callback((Fl_Callback*)roundYoung_CALLBACK);
+	// roundMiddleAge
+	roundMiddleAge = new Fl_Round_Button(220, 170, 95, 30, "Middle Age");
+	roundMiddleAge->type(102);
+	roundMiddleAge->down_box(FL_ROUND_UP_BOX);
+	roundMiddleAge->selection_color(FL_SELECTION_COLOR);
+	roundMiddleAge->labelfont(4);
+	roundMiddleAge->labelsize(12);
+	roundMiddleAge->callback((Fl_Callback*)roundMiddleAge_CALLBACK);
+	// roundOld
+	roundOld = new Fl_Round_Button(325, 170, 95, 30, "Old");
+	roundOld->type(102);
+	roundOld->down_box(FL_ROUND_UP_BOX);
+	roundOld->selection_color(FL_SELECTION_COLOR);
+	roundOld->labelfont(4);
+	roundOld->labelsize(12);
+	roundOld->callback((Fl_Callback*)roundOld_CALLBACK);
+	// roundVenerable
+	roundVenerable = new Fl_Round_Button(430, 170, 95, 30, "Venerable");
+	roundVenerable->type(102);
+	roundVenerable->down_box(FL_ROUND_UP_BOX);
+	roundVenerable->selection_color(FL_SELECTION_COLOR);
+	roundVenerable->labelfont(4);
+	roundVenerable->labelsize(12);
+	roundVenerable->callback((Fl_Callback*)roundVenerable_CALLBACK);
 	sectionAge->end();
 
 	/* Race */
@@ -372,69 +372,69 @@ int main()
 	sectionRace->labelsize(16);
 	sectionRace->labelcolor(FL_BACKGROUND2_COLOR);
 	sectionRace->when(FL_WHEN_NEVER);
-	sectionRace->tooltip("Select a race by clicking on a race name or radio button.\n(click or move out of the section to close)");
+	sectionRace->tooltip("Select a race by clicking on a race name or round button.\n(click or move out of the section to close)");
 	// decorationRace
 	decorationRace = new Fl_Box(100, 260, 300, 150);
 	decorationRace->box(FL_BORDER_BOX);
 	decorationRace->color((Fl_Color)10);
 	decorationRace->labeltype(FL_NO_LABEL);
 	decorationRace->when(FL_WHEN_NEVER);
-	// radioDwarf
-	radioDwarf = new Fl_Round_Button(115, 275, 80, 30, "Dwarf");
-	radioDwarf->type(102);
-	radioDwarf->down_box(FL_ROUND_UP_BOX);
-	radioDwarf->selection_color(FL_SELECTION_COLOR);
-	radioDwarf->labelfont(4);
-	radioDwarf->labelsize(12);
-	radioDwarf->callback((Fl_Callback*)radioDwarf_CALLBACK);
-	// radioGnome
-	radioGnome = new Fl_Round_Button(115, 320, 80, 30, "Gnome");
-	radioGnome->type(102);
-	radioGnome->down_box(FL_ROUND_UP_BOX);
-	radioGnome->selection_color(FL_SELECTION_COLOR);
-	radioGnome->labelfont(4);
-	radioGnome->labelsize(12);
-	radioGnome->callback((Fl_Callback*)radioGnome_CALLBACK);
-	// radioElf
-	radioElf = new Fl_Round_Button(115, 365, 80, 30, "Elf");
-	radioElf->type(102);
-	radioElf->down_box(FL_ROUND_UP_BOX);
-	radioElf->selection_color(FL_SELECTION_COLOR);
-	radioElf->labelfont(4);
-	radioElf->labelsize(12);
-	radioElf->callback((Fl_Callback*)radioElf_CALLBACK);
-	// radioHalfElf
-	radioHalfElf = new Fl_Round_Button(210, 275, 80, 30, "Half-Elf");
-	radioHalfElf->type(102);
-	radioHalfElf->down_box(FL_ROUND_UP_BOX);
-	radioHalfElf->selection_color(FL_SELECTION_COLOR);
-	radioHalfElf->labelfont(4);
-	radioHalfElf->labelsize(12);
-	radioHalfElf->callback((Fl_Callback*)radioHalfElf_CALLBACK);
-	// radioHalfOrc
-	radioHalfOrc = new Fl_Round_Button(210, 320, 80, 30, "Half-Orc");
-	radioHalfOrc->type(102);
-	radioHalfOrc->down_box(FL_ROUND_UP_BOX);
-	radioHalfOrc->selection_color(FL_SELECTION_COLOR);
-	radioHalfOrc->labelfont(4);
-	radioHalfOrc->labelsize(12);
-	radioHalfOrc->callback((Fl_Callback*)radioHalfOrc_CALLBACK);
-	// radioHalfling
-	radioHalfling = new Fl_Round_Button(210, 365, 80, 30, "Halfling");
-	radioHalfling->type(102);
-	radioHalfling->down_box(FL_ROUND_UP_BOX);
-	radioHalfling->selection_color(FL_SELECTION_COLOR);
-	radioHalfling->labelfont(4);
-	radioHalfling->labelsize(12);
-	radioHalfling->callback((Fl_Callback*)radioHalfling_CALLBACK);
-	// radioHuman
-	radioHuman = new Fl_Round_Button(305, 275, 80, 30, "Human");
-	radioHuman->type(102);
-	radioHuman->down_box(FL_ROUND_UP_BOX);
-	radioHuman->selection_color(FL_SELECTION_COLOR);
-	radioHuman->labelfont(4);
-	radioHuman->labelsize(12);
-	radioHuman->callback((Fl_Callback*)radioHuman_CALLBACK);
+	// roundDwarf
+	roundDwarf = new Fl_Round_Button(115, 275, 80, 30, "Dwarf");
+	roundDwarf->type(102);
+	roundDwarf->down_box(FL_ROUND_UP_BOX);
+	roundDwarf->selection_color(FL_SELECTION_COLOR);
+	roundDwarf->labelfont(4);
+	roundDwarf->labelsize(12);
+	roundDwarf->callback((Fl_Callback*)roundDwarf_CALLBACK);
+	// roundGnome
+	roundGnome = new Fl_Round_Button(115, 320, 80, 30, "Gnome");
+	roundGnome->type(102);
+	roundGnome->down_box(FL_ROUND_UP_BOX);
+	roundGnome->selection_color(FL_SELECTION_COLOR);
+	roundGnome->labelfont(4);
+	roundGnome->labelsize(12);
+	roundGnome->callback((Fl_Callback*)roundGnome_CALLBACK);
+	// roundElf
+	roundElf = new Fl_Round_Button(115, 365, 80, 30, "Elf");
+	roundElf->type(102);
+	roundElf->down_box(FL_ROUND_UP_BOX);
+	roundElf->selection_color(FL_SELECTION_COLOR);
+	roundElf->labelfont(4);
+	roundElf->labelsize(12);
+	roundElf->callback((Fl_Callback*)roundElf_CALLBACK);
+	// roundHalfElf
+	roundHalfElf = new Fl_Round_Button(210, 275, 80, 30, "Half-Elf");
+	roundHalfElf->type(102);
+	roundHalfElf->down_box(FL_ROUND_UP_BOX);
+	roundHalfElf->selection_color(FL_SELECTION_COLOR);
+	roundHalfElf->labelfont(4);
+	roundHalfElf->labelsize(12);
+	roundHalfElf->callback((Fl_Callback*)roundHalfElf_CALLBACK);
+	// roundHalfOrc
+	roundHalfOrc = new Fl_Round_Button(210, 320, 80, 30, "Half-Orc");
+	roundHalfOrc->type(102);
+	roundHalfOrc->down_box(FL_ROUND_UP_BOX);
+	roundHalfOrc->selection_color(FL_SELECTION_COLOR);
+	roundHalfOrc->labelfont(4);
+	roundHalfOrc->labelsize(12);
+	roundHalfOrc->callback((Fl_Callback*)roundHalfOrc_CALLBACK);
+	// roundHalfling
+	roundHalfling = new Fl_Round_Button(210, 365, 80, 30, "Halfling");
+	roundHalfling->type(102);
+	roundHalfling->down_box(FL_ROUND_UP_BOX);
+	roundHalfling->selection_color(FL_SELECTION_COLOR);
+	roundHalfling->labelfont(4);
+	roundHalfling->labelsize(12);
+	roundHalfling->callback((Fl_Callback*)roundHalfling_CALLBACK);
+	// roundHuman
+	roundHuman = new Fl_Round_Button(305, 275, 80, 30, "Human");
+	roundHuman->type(102);
+	roundHuman->down_box(FL_ROUND_UP_BOX);
+	roundHuman->selection_color(FL_SELECTION_COLOR);
+	roundHuman->labelfont(4);
+	roundHuman->labelsize(12);
+	roundHuman->callback((Fl_Callback*)roundHuman_CALLBACK);
 	sectionRace->end();
 
 	/* Gender */
@@ -447,29 +447,29 @@ int main()
 	sectionGender->labelsize(16);
 	sectionGender->labelcolor(FL_BACKGROUND2_COLOR);
 	sectionGender->when(FL_WHEN_NEVER);
-	sectionGender->tooltip("Select a gender by clicking on a gender name or radio button.\n(click or move out of the section to close)");
+	sectionGender->tooltip("Select a gender by clicking on a gender name or round button.\n(click or move out of the section to close)");
 	// decorationGender
 	decorationGender = new Fl_Box(445, 260, 95, 105);
 	decorationGender->box(FL_BORDER_BOX);
 	decorationGender->color((Fl_Color)10);
 	decorationGender->labeltype(FL_NO_LABEL);
 	decorationGender->when(FL_WHEN_NEVER);
-	// radioMale
-	radioMale = new Fl_Round_Button(460, 275, 65, 30, "Male");
-	radioMale->type(102);
-	radioMale->down_box(FL_ROUND_UP_BOX);
-	radioMale->selection_color(FL_SELECTION_COLOR);
-	radioMale->labelfont(4);
-	radioMale->labelsize(12);
-	radioMale->callback((Fl_Callback*)radioMale_CALLBACK);
-	// radioFemale
-	radioFemale = new Fl_Round_Button(460, 320, 65, 30, "Female");
-	radioFemale->type(102);
-	radioFemale->down_box(FL_ROUND_UP_BOX);
-	radioFemale->selection_color(FL_SELECTION_COLOR);
-	radioFemale->labelfont(4);
-	radioFemale->labelsize(12);
-	radioFemale->callback((Fl_Callback*)radioFemale_CALLBACK);
+	// roundMale
+	roundMale = new Fl_Round_Button(460, 275, 65, 30, "Male");
+	roundMale->type(102);
+	roundMale->down_box(FL_ROUND_UP_BOX);
+	roundMale->selection_color(FL_SELECTION_COLOR);
+	roundMale->labelfont(4);
+	roundMale->labelsize(12);
+	roundMale->callback((Fl_Callback*)roundMale_CALLBACK);
+	// roundFemale
+	roundFemale = new Fl_Round_Button(460, 320, 65, 30, "Female");
+	roundFemale->type(102);
+	roundFemale->down_box(FL_ROUND_UP_BOX);
+	roundFemale->selection_color(FL_SELECTION_COLOR);
+	roundFemale->labelfont(4);
+	roundFemale->labelsize(12);
+	roundFemale->callback((Fl_Callback*)roundFemale_CALLBACK);
 	sectionGender->end();
 
 	/* Alignment */
@@ -482,7 +482,7 @@ int main()
 	sectionAlignment->labelsize(16);
 	sectionAlignment->labelcolor((Fl_Color)55);
 	sectionAlignment->when(FL_WHEN_NEVER);
-	sectionAlignment->tooltip("Select an alignment by clicking on a radio button inside of the grid.  Please note that the choice you make here will determine the available classes you can be.\n(click or move out of the section to close)");
+	sectionAlignment->tooltip("Select an alignment by clicking on a round button inside of the grid.  Please note that the choice you make here will determine the available classes you can be.\n(click or move out of the section to close)");
 	// decorationAlignment
 	decorationAlignment = new Fl_Box(20, 465, 280, 150);
 	decorationAlignment->box(FL_BORDER_BOX);
@@ -976,7 +976,7 @@ int main()
 	buttonCreateCharacterFile->callback((Fl_Callback*)buttonCreateCharacterFile_CALLBACK);
 	buttonCreateCharacterFile->when(FL_WHEN_RELEASE);
 	buttonCreateCharacterFile->deactivate();
-	buttonCreateCharacterFile->tooltip("Creates a text file using the \"SavedName\" that was choosen.  The text file will have all the calculated stats of your character.  Make sure that all sections have been completed.  Completing the inventory section is optional.\n(click or move out of the button area to close)");
+	buttonCreateCharacterFile->tooltip("Creates a text file using the \"Name\" that was choosen.  The text file will have all the calculated stats of your character.  Make sure that all sections have been completed.  Completing the inventory section is optional.  The output file will be \"CHARACTER_'Name'.txt!\"\n(click or move out of the button area to close)");
 	sectionCommands->end();
 
 	window.end();
@@ -1027,14 +1027,14 @@ void singleName_CALLBACK(Fl_Input* o)
 // Age
 
 /**
-* Callback for the young age radio button.
+* Callback for the young age round button.
 * Updates the age of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioYoung_CALLBACK()
+void roundYoung_CALLBACK()
 {
 	clog << "\nInteraction occurred in Age:" << endl;
 
@@ -1045,14 +1045,14 @@ void radioYoung_CALLBACK()
 }
 
 /**
-* Callback for the middle age age radio button.
+* Callback for the middle age age round button.
 * Updates the age of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioMiddleAge_CALLBACK()
+void roundMiddleAge_CALLBACK()
 {
 	clog << "\nInteraction in Age:" << endl;
 
@@ -1063,14 +1063,14 @@ void radioMiddleAge_CALLBACK()
 }
 
 /**
-* Callback for the old age radio button.
+* Callback for the old age round button.
 * Updates the age of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioOld_CALLBACK()
+void roundOld_CALLBACK()
 {
 	clog << "\nInteraction in Age:" << endl;
 
@@ -1081,14 +1081,14 @@ void radioOld_CALLBACK()
 }
 
 /**
-* Callback for the venerable age radio button.
+* Callback for the venerable age round button.
 * Updates the age of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioVenerable_CALLBACK()
+void roundVenerable_CALLBACK()
 {
 	clog << "\nInteraction in Age:" << endl;
 
@@ -1101,14 +1101,14 @@ void radioVenerable_CALLBACK()
 // Race
 
 /**
-* Callback for the dwarf race radio button.
+* Callback for the dwarf race round button.
 * Updates the race of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioDwarf_CALLBACK()
+void roundDwarf_CALLBACK()
 {
 	clog << "\nInteraction in Race:" << endl;
 
@@ -1119,14 +1119,14 @@ void radioDwarf_CALLBACK()
 }
 
 /**
-* Callback for the gnome race radio button.
+* Callback for the gnome race round button.
 * Updates the race of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioGnome_CALLBACK()
+void roundGnome_CALLBACK()
 {
 	clog << "\nInteraction in Race:" << endl;
 
@@ -1137,14 +1137,14 @@ void radioGnome_CALLBACK()
 }
 
 /**
-* Callback for the elf race radio button.
+* Callback for the elf race round button.
 * Updates the race of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioElf_CALLBACK()
+void roundElf_CALLBACK()
 {
 	clog << "\nInteraction in Race:" << endl;
 
@@ -1155,14 +1155,14 @@ void radioElf_CALLBACK()
 }
 
 /**
-* Callback for the half-elf race radio button.
+* Callback for the half-elf race round button.
 * Updates the race of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioHalfElf_CALLBACK()
+void roundHalfElf_CALLBACK()
 {
 	clog << "\nInteraction in Race:" << endl;
 
@@ -1173,14 +1173,14 @@ void radioHalfElf_CALLBACK()
 }
 
 /**
-* Callback for the half-orc race radio button.
+* Callback for the half-orc race round button.
 * Updates the race of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioHalfOrc_CALLBACK()
+void roundHalfOrc_CALLBACK()
 {
 	clog << "\nInteraction in Race:" << endl;
 
@@ -1191,14 +1191,14 @@ void radioHalfOrc_CALLBACK()
 }
 
 /**
-* Callback for the halfling race radio button.
+* Callback for the halfling race round button.
 * Updates the race of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioHalfling_CALLBACK()
+void roundHalfling_CALLBACK()
 {
 	clog << "\nInteraction in Race:" << endl;
 
@@ -1209,14 +1209,14 @@ void radioHalfling_CALLBACK()
 }
 
 /**
-* Callback for the human race radio button.
+* Callback for the human race round button.
 * Updates the race of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioHuman_CALLBACK()
+void roundHuman_CALLBACK()
 {
 	clog << "\nInteraction in Race:" << endl;
 
@@ -1229,14 +1229,14 @@ void radioHuman_CALLBACK()
 // Gender
 
 /**
-* Callback for the male gender radio button.
+* Callback for the male gender round button.
 * Updates the gender of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioMale_CALLBACK()
+void roundMale_CALLBACK()
 {
 	clog << "\nInteraction in Gender:" << endl;
 
@@ -1247,14 +1247,14 @@ void radioMale_CALLBACK()
 }
 
 /**
-* Callback for the female gender radio button.
+* Callback for the female gender round button.
 * Updates the gender of the character.
 *
 * @param none
 *
 * @return none
 */
-void radioFemale_CALLBACK()
+void roundFemale_CALLBACK()
 {
 	clog << "\nInteraction in Gender:" << endl;
 
@@ -1267,7 +1267,7 @@ void radioFemale_CALLBACK()
 // Alignment
 
 /**
-* Callback for the lawful good alignment radio button.
+* Callback for the lawful good alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1289,7 +1289,7 @@ void optionLawfulGood_CALLBACK()
 }
 
 /**
-* Callback for the neutral good alignment radio button.
+* Callback for the neutral good alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1311,7 +1311,7 @@ void optionNeutralGood_CALLBACK()
 }
 
 /**
-* Callback for the chaotic good alignment radio button.
+* Callback for the chaotic good alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1333,7 +1333,7 @@ void optionChaoticGood_CALLBACK()
 }
 
 /**
-* Callback for the lawful neutral alignment radio button.
+* Callback for the lawful neutral alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1355,7 +1355,7 @@ void optionLawfulNeutral_CALLBACK()
 }
 
 /**
-* Callback for the true neutral alignment radio button.
+* Callback for the true neutral alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1377,7 +1377,7 @@ void optionNeutral_CALLBACK()
 }
 
 /**
-* Callback for the chaotic neutral alignment radio button.
+* Callback for the chaotic neutral alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1399,7 +1399,7 @@ void optionChaoticNeutral_CALLBACK()
 }
 
 /**
-* Callback for the lawful evil alignment radio button.
+* Callback for the lawful evil alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1421,7 +1421,7 @@ void optionLawfulEvil_CALLBACK()
 }
 
 /**
-* Callback for the neutral evil alignment radio button.
+* Callback for the neutral evil alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -1443,7 +1443,7 @@ void optionNeutralEvil_CALLBACK()
 }
 
 /**
-* Callback for the chaotic evil alignment radio button.
+* Callback for the chaotic evil alignment round button.
 * Updates the alignment of the character.
 * Send request to toggle classes.
 *
@@ -2054,10 +2054,10 @@ void resetName() {
 * @return none
 */
 void resetAge() {
-	radioYoung->clear();
-	radioMiddleAge->clear();
-	radioOld->clear();
-	radioVenerable->clear();
+	roundYoung->clear();
+	roundMiddleAge->clear();
+	roundOld->clear();
+	roundVenerable->clear();
 
 	clog << "Age Section Reset!" << endl;
 
@@ -2072,13 +2072,13 @@ void resetAge() {
 * @return none
 */
 void resetRace() {
-	radioDwarf->clear();
-	radioGnome->clear();
-	radioElf->clear();
-	radioHalfElf->clear();
-	radioHalfOrc->clear();
-	radioHalfling->clear();
-	radioHuman->clear();
+	roundDwarf->clear();
+	roundGnome->clear();
+	roundElf->clear();
+	roundHalfElf->clear();
+	roundHalfOrc->clear();
+	roundHalfling->clear();
+	roundHuman->clear();
 
 	clog << "Race Section Reset!" << endl;
 
@@ -2093,8 +2093,8 @@ void resetRace() {
 * @return none
 */
 void resetGender() {
-	radioMale->clear();
-	radioFemale->clear();
+	roundMale->clear();
+	roundFemale->clear();
 
 	clog << "Gender Section Reset!" << endl;
 
